@@ -1,5 +1,5 @@
 export default {
-  updateDefaultField ({ commit }, value) {
+  updateDefaultField({ commit }, value) {
     commit('UPDATE_DEFAULT_FIELD', value)
   }
 }

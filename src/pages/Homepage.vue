@@ -15,28 +15,27 @@
 export default {
   name: 'homepage',
 
-  data () {
+  data() {
     return {
       titleText: 'Welcome to Your Vue.js App'
     }
   },
 
-  components: {
-  }
+  components: {}
 }
 </script>
 
 <style lang="scss">
-.homepage{
+.homepage {
   width: 100%;
   height: 100vh;
   @include flex-box-center(column);
-  .logo{
+  .logo {
     width: 200px;
     margin: 0 auto;
     background-size: 100% 100%;
   }
-  .learn-more{
+  .learn-more {
     display: inline-block;
     margin: 15px auto;
     padding: 5px 16px;

@@ -19,7 +19,7 @@ const routerInstance = new Router({
   routes: RoutesMapConfig.concat(commonRoutesMap)
 })
 
-Object.values(beforeEachHooks).forEach((hook) => {
+Object.values(beforeEachHooks).forEach(hook => {
   routerInstance.beforeEach(hook)
 })
 

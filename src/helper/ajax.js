@@ -2,7 +2,7 @@ import axios from 'axios'
 import $q from 'q'
 import { $utils } from '@helper'
 
-function requestHandle (params) {
+function requestHandle(params) {
   const defer = $q.defer()
   axios(params)
     .then(res => {
@@ -20,32 +20,33 @@ function requestHandle (params) {
       } else {
         defer.reject()
       }
-    }).catch(err => {
+    })
+    .catch(err => {
       defer.reject(err)
     })
 
   return defer.promise
 }
 
-function redirectToIframe (url) {
+function redirectToIframe(url) {
   const iframe = document.createElement('iframe')
   iframe.style.display = 'none'
   iframe.src = url
-  iframe.onload = function () {
+  iframe.onload = function() {
     document.body.removeChild(iframe)
   }
   document.body.appendChild(iframe)
 }
 
 export default {
-  post: function (url, params) {
+  post: function(url, params) {
     return requestHandle({
       method: 'post',
       url: url,
       data: params
     })
   },
-  get: function (url, params) {
+  get: function(url, params) {
     return requestHandle({
       method: 'get',
       url: $utils.queryString(url, params)

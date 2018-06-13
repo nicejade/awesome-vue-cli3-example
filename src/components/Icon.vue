@@ -8,9 +8,8 @@
 import Icons from '@assets/icons'
 
 export default {
-  data () {
-    return {
-    }
+  data() {
+    return {}
   },
 
   props: {
@@ -18,14 +17,14 @@ export default {
       type: String,
       required: true,
       default: '',
-      validator (val) {
+      validator(val) {
         return Icons[val]
       }
     }
   },
 
   computed: {
-    iconClass () {
+    iconClass() {
       return 'icon-' + this.name
     }
   }
@@ -33,9 +32,8 @@ export default {
 </script>
 
 <style lang="scss">
-.svg-icon{
+.svg-icon {
   width: 1rem;
   height: 1rem;
 }
 </style>
-

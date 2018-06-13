@@ -101,30 +101,30 @@ export default {
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 20px 0;
-  .error-404-body-title{
+  .error-404-body-title {
     text-align: center;
     font-size: 7rem;
     font-weight: 700;
     color: #2d8cf0;
     height: 13rem;
     line-height: 13rem;
-    .cener-zero{
+    .cener-zero {
       display: inline-block;
       color: #19be6b;
       animation: error-404-animation 3s ease 0s infinite alternate;
       margin: 0 -1rem;
     }
-    .left-four{
+    .left-four {
       margin: 0;
       display: inline-block;
       animation: left-four-animation 3s ease 0s infinite alternate;
     }
-    .right-four{
+    .right-four {
       margin: 0;
       display: inline-block;
       animation: right-four-animation 3s ease 0s infinite alternate;
     }
-    .zero-icon{
+    .zero-icon {
       width: 7rem;
       height: 7rem;
     }
@@ -139,12 +139,12 @@ export default {
   }
 }
 
-@media (max-width:375px) {
-  .el-card__body{
+@media (max-width: 375px) {
+  .el-card__body {
     padding: 10px 0;
   }
-  .error-404-body{
-    .error-404-body-title{
+  .error-404-body {
+    .error-404-body-title {
       height: 12rem;
       font-size: 6rem;
     }

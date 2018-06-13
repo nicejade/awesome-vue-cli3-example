@@ -8,7 +8,6 @@ Vue.config.productionTip = false
 const lang = Cookies.get('lang') || 'en'
 Vue.config.lang = lang
 
-
 /* ------------------------Vue Global Variable------------------------------ */
 import { $apis, $utils, $document, $auth, $lodash } from '@helper'
 Vue.prototype.$_ = $lodash
@@ -22,5 +21,5 @@ for (let key in Filters) {
 }
 
 /* ------------------------Vue Global Components------------------------------ */
-import Icon from "@components/Icon"
+import Icon from '@components/Icon'
 Vue.component('icon', Icon)

@@ -47,8 +47,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
-.hello{
+.hello {
   h1 {
     margin-bottom: 40px;
     color: #f292bb;

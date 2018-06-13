@@ -17,7 +17,7 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'learnMore',
 
-  data () {
+  data() {
     return {
       titleText: 'Welcome to Your Vue.js App'
     }
@@ -28,17 +28,13 @@ export default {
   },
 
   computed: {
-    ...mapGetters('demo', [
-      'defaultField'
-    ])
+    ...mapGetters('demo', ['defaultField'])
   },
 
   methods: {
-    ...mapActions('demo', [
-      'updateDefaultField'
-    ]),
+    ...mapActions('demo', ['updateDefaultField']),
 
-    onChangeVuexStateClick () {
+    onChangeVuexStateClick() {
       this.updateDefaultField(211314)
     }
   }
@@ -46,9 +42,8 @@ export default {
 </script>
 
 <style lang="scss">
-.learn-more{
+.learn-more {
   height: 100vh;
   @include flex-box-center(column);
 }
 </style>
-

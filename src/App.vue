@@ -8,13 +8,12 @@
 export default {
   name: 'app',
 
-  components: {
-  }
+  components: {}
 }
 </script>
 
 <style lang="scss">
-@import "./assets/styles/style.scss";
+@import './assets/styles/style.scss';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

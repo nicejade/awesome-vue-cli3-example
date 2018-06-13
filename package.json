@@ -10,7 +10,8 @@
     "deploy": "bash ./commands/deploy.sh",
     "clear-commit-msg": "bash ./commands/clear-commit-msg.sh",
     "analyz": "NODE_ENV=production  npm_config_report=true npm run build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "format": "prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\""
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -25,9 +26,12 @@
     "@vue/cli-plugin-babel": "^3.0.0-beta.11",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.11",
     "@vue/cli-service": "^3.0.0-beta.11",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "file-loader": "^1.1.11",
     "node-sass": "^4.9.0",
     "prerender-spa-plugin": "^3.2.1",
+    "prettier-eslint-cli": "^4.7.1",
     "sass-loader": "^7.0.1",
     "svg-sprite-loader": "^3.8.0",
     "svgo-loader": "1.1.0",
@@ -47,12 +51,17 @@
     },
     "extends": [
       "plugin:vue/essential",
+      "plugin:prettier/recommended",
       "eslint:recommended"
     ],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
     }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
   },
   "postcss": {
     "plugins": {

@@ -4,7 +4,7 @@
 import Cookies from 'js-cookie'
 
 export default {
-  checkSession () {
+  checkSession() {
     return Cookies.get('isLogin')
   }
 }
