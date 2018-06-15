@@ -1,14 +1,12 @@
 const path = require('path')
 const fs = require('fs')
-const webpack = require('webpack')
-const merge = require('webpack-merge')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 
-function resolveRealPath (dir) {
+function resolveRealPath(dir) {
   return path.join(__dirname, dir)
 }
 
-function loadGlobalStyles () {
+function loadGlobalStyles() {
   const variables = fs.readFileSync('src/assets/styles/variables.scss', 'utf-8')
   const mixins = fs.readFileSync('src/assets/styles/mixins.scss', 'utf-8')
   return variables + mixins
@@ -39,7 +37,9 @@ module.exports = {
 
   // babel-loader skips `node_modules` deps by default.
   // explicitly transpile a dependency with this option.
-  transpileDependencies: [/* string or regex */],
+  transpileDependencies: [
+    /* string or regex */
+  ],
 
   // generate sourceMap for production build?
   productionSourceMap: process.env.NODE_ENV !== 'production',
@@ -55,9 +55,8 @@ module.exports = {
 
   // tweak internal webpack configuration.
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
-  chainWebpack: (config) => {
-    config.resolve
-      .alias
+  chainWebpack: config => {
+    config.resolve.alias
       .set('vue$', 'vue/dist/vue.esm.js')
       .set('@helper', resolveRealPath('src/helper'))
       .set('@pages', resolveRealPath('src/pages'))
@@ -73,7 +72,7 @@ module.exports = {
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
       .options({
-        name: "[name]-[hash:7]",
+        name: '[name]-[hash:7]',
         prefixize: true
       })
 
@@ -91,7 +90,7 @@ module.exports = {
         // Required - The path to the webpack-outputted app to prerender.
         staticDir: path.join(__dirname, 'dist'),
         // Required - Routes to render.
-        routes: [ '/', '/learn-more', ],
+        routes: ['/', '/learn-more']
       })
     ]
   },
@@ -131,6 +130,5 @@ module.exports = {
   },
 
   // options for 3rd party plugins
-  pluginOptions: {
-  }
+  pluginOptions: {}
 }

@@ -11,7 +11,19 @@
     "clear-commit-msg": "bash ./commands/clear-commit-msg.sh",
     "analyz": "NODE_ENV=production  npm_config_report=true npm run build",
     "lint": "vue-cli-service lint",
-    "format": "prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\""
+    "precommit-msg": "echo '🐉 Start pre-commit checks...' && exit 0",
+    "eslint-fix": "eslint src/**/**/*.vue --fix",
+    "format-code": "prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\"",
+    "postinstall": "node node_modules/husky/lib/installer/bin install"
+  },
+  "lint-staged": {
+    "**/**.{js,json,pcss,md,vue}": ["prettier --write", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run precommit-msg && lint-staged",
+      "pre-push": "yarn test"
+    }
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -54,14 +66,29 @@
       "plugin:prettier/recommended",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": 0,
+      "no-useless-escape": 0,
+      "no-multiple-empty-lines": [
+        2,
+        {
+          "max": 4
+        }
+      ],
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "trailingComma": "none",
+          "bracketSpacing": true,
+          "jsxBracketSameLine": true,
+          "parser": "flow"
+        }
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false
   },
   "postcss": {
     "plugins": {
