@@ -1,3 +1,5 @@
+/** @format */
+
 import axios from 'axios'
 import $q from 'q'
 import { $utils } from '@helper'

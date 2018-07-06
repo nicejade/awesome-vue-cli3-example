@@ -1,3 +1,5 @@
+/** @format */
+
 export default [
   {
     path: '/learn-more',

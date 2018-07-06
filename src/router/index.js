@@ -1,3 +1,5 @@
+/** @format */
+
 import Vue from 'vue'
 import Router from 'vue-router'
 import beforeEachHooks from './beforeEachHooks'

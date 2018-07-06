@@ -1,3 +1,5 @@
+/** @format */
+
 import Vue from 'vue'
 import Cookies from 'js-cookie'
 import Filters from './filters'

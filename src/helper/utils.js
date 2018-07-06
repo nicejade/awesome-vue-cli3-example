@@ -1,3 +1,5 @@
+/** @format */
+
 import Vue from 'vue'
 
 if (typeof String.prototype.startsWith !== 'function') {

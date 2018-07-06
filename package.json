@@ -58,39 +58,53 @@
       "@vue/app"
     ]
   },
+  "eslintIgnore": [
+    "package.json"
+  ],
   "eslintConfig": {
+    "globals": {
+      "L": true
+    },
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "es6": true
     },
-    "extends": [
-      "plugin:vue/essential",
-      "plugin:prettier/recommended",
-      "eslint:recommended"
-    ],
     "rules": {
       "no-console": 0,
       "no-useless-escape": 0,
       "no-multiple-empty-lines": [
         2,
         {
-          "max": 4
+          "max": 3
         }
       ],
       "prettier/prettier": [
         "error",
         {
           "singleQuote": true,
+          "semi": false,
           "trailingComma": "none",
           "bracketSpacing": true,
           "jsxBracketSameLine": true,
-          "parser": "flow"
+          "insertPragma": true,
+          "requirePragma": false
         }
       ]
     },
+    "plugins": [],
+    "extends": [
+      "plugin:vue/essential",
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
     "parserOptions": {
       "parser": "babel-eslint"
     }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
   },
   "postcss": {
     "plugins": {

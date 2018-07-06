@@ -1,3 +1,5 @@
+/** @format */
+
 export default {
   toggleClass(el, className) {
     if (el.classList) {
