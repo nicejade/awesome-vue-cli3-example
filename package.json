@@ -17,12 +17,14 @@
     "postinstall": "node node_modules/husky/lib/installer/bin install"
   },
   "lint-staged": {
-    "**/**.{js,json,pcss,md,vue}": ["prettier --write", "git add"]
+    "**/**.{js,json,pcss,md,vue}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run precommit-msg && lint-staged",
-      "pre-push": "yarn test"
+      "pre-commit": "yarn run precommit-msg && lint-staged"
     }
   },
   "dependencies": {
