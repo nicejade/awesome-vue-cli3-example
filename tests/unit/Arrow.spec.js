@@ -1,29 +1,30 @@
+/** @format */
+
 import { shallowMount } from '@vue/test-utils'
 import Arrow from '@/components/icons/Arrow.vue'
 
 describe('Arrow.vue', () => {
   // ------------------------Test [props.direction]------------------------Start
   it('renders props.direction when passed', () => {
-    const parpDirection = 'left'
+    const parpDirection = 'right'
     const wrapper = shallowMount(Arrow, {
       propsData: { direction: parpDirection }
     })
-    const compClassListStr = wrapper
-      .find('.arrow-component')
-      .element.classList.toString()
-    expect(compClassListStr).toBe(`arrow-component ${parpDirection}`)
+    expect(wrapper.classes()).toContain(parpDirection)
   })
 
   it('renders props.direction when NOT passed', () => {
     // direction default Value is [left]
     const parpDirection = '~~left'
+    const defaultDirection = 'left'
     const wrapper = shallowMount(Arrow, {
       propsData: { direction: parpDirection }
     })
-    const compClassListStr = wrapper
+    expect(wrapper.classes()).toContain(defaultDirection)
+    /* const compClassListStr = wrapper
       .find('.arrow-component')
       .element.classList.toString()
-    expect(compClassListStr).toBe(`arrow-component left`)
+    expect(compClassListStr).toBe(`arrow-component left`) */
   })
 
   // ------------------------Test [props.color]------------------------Start
