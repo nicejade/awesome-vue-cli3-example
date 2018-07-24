@@ -1,3 +1,6 @@
+/** @format */
+const path = require('path')
+
 module.exports = {
   moduleFileExtensions: ['js', 'jsx', 'json', 'vue'],
   transform: {
@@ -12,5 +15,9 @@ module.exports = {
   snapshotSerializers: ['jest-serializer-vue'],
   testMatch: [
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
-  ]
+  ],
+  collectCoverage: true,
+  collectCoverageFrom: ['src/**/*.{js,vue}', '!src/assets/**'],
+  coverageReporters: ['html', 'text-summary'],
+  coverageDirectory: path.resolve(__dirname, './tests/coverage')
 }
