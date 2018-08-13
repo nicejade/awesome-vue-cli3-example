@@ -33,9 +33,8 @@ module.exports = {
   // when set to 'error', lint errors will cause compilation to fail.
   lintOnSave: true,
 
-  // use the full build with in-browser compiler?
-  // https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
-  compiler: false,
+  // https://cli.vuejs.org/config/#runtimecompiler
+  runtimeCompiler: false,
 
   // babel-loader skips `node_modules` deps by default.
   // explicitly transpile a dependency with this option.
