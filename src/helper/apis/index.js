@@ -1,3 +1,5 @@
+/** @format */
+
 const files = require.context('.', true, /\.js/)
 const modules = {}
 

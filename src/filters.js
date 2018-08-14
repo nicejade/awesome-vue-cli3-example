@@ -1,3 +1,5 @@
+/** @format */
+
 import dayjs from 'dayjs'
 
 export default {

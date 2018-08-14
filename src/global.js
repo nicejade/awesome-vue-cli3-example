@@ -1,3 +1,5 @@
+/** @format */
+
 import Vue from 'vue'
 import Cookies from 'js-cookie'
 import Filters from './filters'
@@ -23,3 +25,6 @@ for (let key in Filters) {
 /* ------------------------Vue Global Components------------------------------ */
 import Icon from '@components/Icon'
 Vue.component('icon', Icon)
+
+import Arrow from '@components/icons/Arrow'
+Vue.component('arrow', Arrow)

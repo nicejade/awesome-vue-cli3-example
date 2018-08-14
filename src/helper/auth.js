@@ -1,6 +1,10 @@
-/*
-* 权限验证模块
-*/
+/**
+ * /*
+ * 权限验证模块
+ *
+ * @format
+ */
+
 import Cookies from 'js-cookie'
 
 export default {

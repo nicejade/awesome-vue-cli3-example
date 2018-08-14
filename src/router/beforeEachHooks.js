@@ -1,6 +1,10 @@
-/*
-* 路由跳转权限控制
-*/
+/**
+ * /*
+ * 路由跳转权限控制
+ *
+ * @format
+ */
+
 import Vue from 'vue'
 import { $auth } from '@helper'
 

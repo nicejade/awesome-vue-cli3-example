@@ -3,19 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "yarn serve",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "preview": "node ./commands/preview.js",
-    "deploy": "bash ./commands/deploy.sh",
-    "clear-commit-msg": "bash ./commands/clear-commit-msg.sh",
-    "analyz": "NODE_ENV=production  npm_config_report=true npm run build",
     "lint": "vue-cli-service lint",
-    "format": "prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\""
+    "deploy": "bash ./commands/deploy.sh",
+    "start": "yarn serve",
+    "clear-commit-msg": "bash ./commands/clear-commit-msg.sh",
+    "preview": "node ./commands/preview.js",
+    "test:unit": "vue-cli-service test:unit",
+    "precommit-msg": "echo '🐉 Start pre-commit checks...' && exit 0",
+    "eslint-fix": "eslint src/**/**/*.vue --fix",
+    "format-code": "prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\"",
+    "postinstall": "node node_modules/husky/lib/installer/bin install",
+    "analyz": "NODE_ENV=production  npm_config_report=true npm run build"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "dayjs": "^1.6.6",
+    "husky": "1.0.0-rc.9",
     "js-cookie": "^2.2.0",
     "q": "^1.5.1",
     "vue": "^2.5.16",
@@ -25,10 +30,15 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
+    "@vue/cli-plugin-unit-jest": "^3.0.0",
     "@vue/cli-service": "^3.0.0",
+    "@vue/test-utils": "^1.0.0-beta.24",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "file-loader": "^1.1.11",
+    "lint-staged": "^7.2.0",
     "node-sass": "^4.9.0",
     "prerender-spa-plugin": "^3.2.1",
     "prettier-eslint-cli": "^4.7.1",
@@ -45,16 +55,42 @@
     ]
   },
   "eslintConfig": {
+    "globals": {
+      "L": true
+    },
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "es6": true
     },
+    "rules": {
+      "no-console": 0,
+      "no-useless-escape": 0,
+      "no-multiple-empty-lines": [
+        2,
+        {
+          "max": 3
+        }
+      ],
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "semi": false,
+          "trailingComma": "none",
+          "bracketSpacing": true,
+          "jsxBracketSameLine": true,
+          "insertPragma": true,
+          "requirePragma": false
+        }
+      ]
+    },
+    "plugins": [],
     "extends": [
       "plugin:vue/essential",
       "plugin:prettier/recommended",
       "eslint:recommended"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -72,5 +108,19 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run precommit-msg && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/**.{js,json,pcss,md,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintIgnore": [
+    "package.json"
   ]
 }
