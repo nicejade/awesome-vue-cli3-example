@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <svg class="svg-icon" :class="iconClass">
     <use :xlink:href="'#' + name"></use>

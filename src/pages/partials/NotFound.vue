@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div class="error-404">
     <div class="error-404-body">

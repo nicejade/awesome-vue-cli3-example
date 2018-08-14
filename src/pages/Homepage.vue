@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div class="homepage">
     <img class="logo" src="@assets/images/logo.png">
