@@ -3,6 +3,7 @@
 const path = require('path')
 const fs = require('fs')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
+const SizePlugin = require('size-plugin')
 
 function resolveRealPath(dir) {
   return path.join(__dirname, dir)
@@ -127,7 +128,8 @@ module.exports = {
         staticDir: path.join(__dirname, 'dist'),
         // Required - Routes to render.
         routes: ['/', '/learn-more']
-      })
+      }),
+      new SizePlugin()
     ]
   },
 
