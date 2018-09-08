@@ -2,11 +2,12 @@
 
 <template>
   <div class="instruction-area">
+    <h2 class="title">功能详述</h2>
     <el-collapse v-model="activeNames" @change="onHandleChange">
     <el-collapse-item title="功能丰富" name="0">
       <div><strong>Vue-Cli3</strong>：对 Babel、TypeScript、ESLint、PostCSS、PWA、单元测试和 End-to-end 测试提供开箱即用的支持。</div>
       <div class="extra-instruction">
-        <MarkdownPreview value="**此脚手架**：基于 Vue-Cli3 所构建，延续早先[vue-boilerplate-template](https://github.com/nicejade/vue-boilerplate-template)项目所倡导，旨在探究更高效地构建优质 Vue 应用（推荐阅读[开箱即用的 Vue Webpack 脚手架模版](https://jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/)）；为此，有作以下工作：" />
+        <MarkdownPreview value="**此脚手架**：基于 Vue-Cli3 所构建，延续早先[vue-boilerplate-template](https://github.com/nicejade/vue-boilerplate-template)项目所倡导，旨在探究更高效地构建优质 Web 应用（推荐阅读[开箱即用的 Vue Webpack 脚手架模版](https://jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/)）；为此，有作以下工作：" />
         <MarkdownPreview :value="newFunctionintroduceMd" />
       </div>
     </el-collapse-item>
@@ -22,7 +23,7 @@
         <strong>此脚手架</strong>：默认对项目基本所需，已在 <mark>vue.config.js</mark> 中做了填写，参照的同时，你可自行修改。
       </div>
       <div class="warning-tip">
-        <strong>注意事项</strong>：在 <mark>vue.config.js</mark> 中，已对<mark>全局样式</mark>做了预先注入，可以无需引用即可使用；对此，须要付出的代价是，一旦对<mark>全局样式</mark>做了修改，需要重新运行项目，方可生效。
+        <strong>注意事项</strong>：在 <mark>vue.config.js</mark> 中，已对<mark>全局样式</mark>做了预先注入，可以无需引用即可使用；对此，须要付出的代价是，一旦对预先注入的<mark>全局样式</mark>做了修改，需要重新运行项目，方可生效。
       </div>
     </el-collapse-item>
     <el-collapse-item title="CLI 之上的图形化界面" name="3">
@@ -53,10 +54,11 @@ export default {
 - [x] 基于 Webepack 4.* 新增特性，作了优化，详见 \`vue.config.js\`；
 - [x] 开启 & 运用 [Jest](https://jestjs.io/) 对组件做单元测试，并附以 Demo 示例；
 - [x] 集成 [Prettier](https://prettier.io/) 插件并做配置，促使团队写出更好且风格一致的代码，具体参见[使用 ESLint ＆ Prettier美化Vue代码](https://jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/)；
-- [x] 注入 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) 插件，使得在单页面应用程序中预呈现静态 HTML，优化 SEO 以及首屏渲染。
-- [x] 注入 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)插件，使得运行 \`yarn analyz\`，即可直观得到构建包内容，以助优化；详情参见：[Webpack 打包优化之体积篇](https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/#%E5%AE%9A%E4%BD%8D-webpack-%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0)
-- [x] 注入 [size-plugin](https://github.com/GoogleChromeLabs/size-plugin)插件，使得在构建应用之时，可打印 Webpack 资产的 gzip 大小，以及自上次构建以来的变更。
-- [ ] 将此脚手架，结合 **Nginx** **Node.js**(Koa2) **MondoDb** **Redis**，汇融入于 **Docker**，使 Front-End Developer 可轻松构建整个 Web 应用。
+- [x] 注入 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)  插件，使得在单页面应用程序中预呈现静态 HTML，优化 SEO 以及首屏渲染。
+- [x] 注入 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) 插件，使得运行 \`yarn analyz\`，即可直观得到构建包内容，以助优化；详情参见：[Webpack 打包优化之体积篇](https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/#%E5%AE%9A%E4%BD%8D-webpack-%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0)
+- [x] 注入 [size-plugin](https://github.com/GoogleChromeLabs/size-plugin) 插件，使得在构建应用之时，可打印 Webpack 资产的 gzip 大小，以及自上次构建以来的变更。
+- [ ] 优化内置 \`Icon\`(Svg) 组件，使可以接收不同方式输入，并将 Svg 提取至单独文件中，以避免资源重复加载；
+- [ ] 将此脚手架，结合 **Node.js**(Koa2) **Nginx** **MondoDb** **Redis**，汇融入于 **Docker**，使 Front-End Developer 可轻松构建整个 Web 应用。
       `
     }
   },
@@ -72,6 +74,10 @@ export default {
 <style lang="scss">
 .instruction-area {
   text-align: left;
+  .title {
+    font-size: $font-large;
+    text-align: center;
+  }
   .extra-instruction {
     color: $text-grey;
   }
