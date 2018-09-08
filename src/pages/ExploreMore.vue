@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <section class="page-module explore-more">
     <div class="module-content">

@@ -35,7 +35,7 @@ export default {
 
 <style lang="scss">
 .svg-icon {
-  width: 1rem;
-  height: 1rem;
+  width: $font-medium;
+  height: $font-medium;
 }
 </style>

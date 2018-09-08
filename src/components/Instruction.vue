@@ -1,10 +1,23 @@
+<!-- @format -->
+
 <template>
   <div class="instruction-area">
     <el-collapse v-model="activeNames" @change="onHandleChange">
     <el-collapse-item title="功能丰富" name="0">
       <div><strong>Vue-Cli3</strong>：对 Babel、TypeScript、ESLint、PostCSS、PWA、单元测试和 End-to-end 测试提供开箱即用的支持。</div>
       <div class="extra-instruction">
-        <strong>此脚手架</strong>：在其基础上注入 Vuex Vue-router Element-ui 等，并做了基本配置，以便捷应用开发；额外，还集成了 <mark>Prettier</mark>，使得可促使团队写出更好且风格一致的代码（详情可参见 <a href="https://jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/" target="_blank" rel="noreferrer noopener">使用ESLint ＆ Prettier美化Vue代码</a>）；且内置了运用 <mark>Jest</mark>对组件做单元测试的示例。
+        <vue-markdown>**此脚手架**：基于 Vue-Cli3 所构建，继续早先[vue-boilerplate-template](https://github.com/nicejade/vue-boilerplate-template)项目之所欲，旨在探究更高效而优质地构建 Vue 应用；
+        </vue-markdown>
+        <div>
+          <li>注入 <a href="https://router.vuejs.org/zh/">Vue-router</a>，使得构建单页面应用(SPA)变得易如反掌；</li>
+          <li>注入 <a href="https://vuex.vuejs.org/zh/">Vuex</a>，以方便处理应用程序开发的状态管理；</li>
+          <li>注入 <a href="http://element.eleme.io/#/zh-CN">Element-ui</a>，以便快速搭建网站，而无需过多关注 UI；</li>
+          <li>引入 <a href="https://github.com/axios/axios">Axios</a> 并做封装，使得更优雅处理 Http 请求；</li>
+          <li>引入 <a href="https://github.com/iamkun/dayjs">Dayjs</a>，使得以更小的代价，处理日期时间相关；</li>
+          <li>开启 & 运用 <a href="https://jestjs.io/">Jest</a> 对组件做单元测试，并附以示例；</li>
+          <li>集成 <a href="https://prettier.io/">Prettier</a>，促使团队写出更好且风格一致的代码，具体参见<a href="https://jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/">使用ESLint ＆ Prettier美化Vue代码</a>；</li>
+          <li>注入 <a href="https://github.com/GoogleChromeLabs/size-plugin">size-plugin</a> 插件，打印 Webpack 资产的 gzip 大小，以及自上次构建以来的变更。</li>
+        </div>
       </div>
     </el-collapse-item>
     <el-collapse-item title="易于扩展" name="1">
@@ -36,14 +49,21 @@
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown'
+
 export default {
   data() {
     return {
       activeNames: ['0', '1', '2', '3', '4', '5']
     }
   },
+
   methods: {
-    onHandleChange(val) {}
+    onHandleChange() {}
+  },
+
+  components: {
+    VueMarkdown
   }
 }
 </script>
