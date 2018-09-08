@@ -5,7 +5,7 @@
     <h1 class="title">{{ titleText }}</h1>
     <img class="logo" src="@assets/images/logo.png">
     <p class="description">
-      基于 vue-cli3 开箱即用的 Vue 脚手架模版，集成 Webpack Vuex Vue-router Element-ui 等周边生态工具，致力于探究更优质地构建 Vue 应用；推荐阅读<a href="https://jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/" target="_blank" rel="noreferrer noopener">开箱即用的 Vue Webpack 脚手架模版</a>。
+      此为基于 <mark>vue-cli3</mark> 搭建的开箱即用脚手架模版，<br>致力于探究更高效地构建优质 <mark>Vue</mark> 应用。
     </p>
     <div class="action-area">
       <a href="https://cli.vuejs.org/zh/" target="_blank" rel="noreferrer noopener" class="find-more"><icon name="document"></icon>Vue Cli3 文档</a>

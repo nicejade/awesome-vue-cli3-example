@@ -26,6 +26,12 @@ for (let key in Filters) {
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
 
+import Markdown from '@components/markdown/Index'
+Vue.component('Markdown', Markdown)
+
+import MarkdownPreview from '@components/markdown/MarkdownPreview'
+Vue.component('MarkdownPreview', MarkdownPreview)
+
 import Icon from '@components/Icon'
 Vue.component('icon', Icon)
 

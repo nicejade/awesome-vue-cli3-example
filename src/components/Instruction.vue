@@ -6,18 +6,8 @@
     <el-collapse-item title="功能丰富" name="0">
       <div><strong>Vue-Cli3</strong>：对 Babel、TypeScript、ESLint、PostCSS、PWA、单元测试和 End-to-end 测试提供开箱即用的支持。</div>
       <div class="extra-instruction">
-        <vue-markdown>**此脚手架**：基于 Vue-Cli3 所构建，继续早先[vue-boilerplate-template](https://github.com/nicejade/vue-boilerplate-template)项目之所欲，旨在探究更高效而优质地构建 Vue 应用；
-        </vue-markdown>
-        <div>
-          <li>注入 <a href="https://router.vuejs.org/zh/">Vue-router</a>，使得构建单页面应用(SPA)变得易如反掌；</li>
-          <li>注入 <a href="https://vuex.vuejs.org/zh/">Vuex</a>，以方便处理应用程序开发的状态管理；</li>
-          <li>注入 <a href="http://element.eleme.io/#/zh-CN">Element-ui</a>，以便快速搭建网站，而无需过多关注 UI；</li>
-          <li>引入 <a href="https://github.com/axios/axios">Axios</a> 并做封装，使得更优雅处理 Http 请求；</li>
-          <li>引入 <a href="https://github.com/iamkun/dayjs">Dayjs</a>，使得以更小的代价，处理日期时间相关；</li>
-          <li>开启 & 运用 <a href="https://jestjs.io/">Jest</a> 对组件做单元测试，并附以示例；</li>
-          <li>集成 <a href="https://prettier.io/">Prettier</a>，促使团队写出更好且风格一致的代码，具体参见<a href="https://jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/">使用ESLint ＆ Prettier美化Vue代码</a>；</li>
-          <li>注入 <a href="https://github.com/GoogleChromeLabs/size-plugin">size-plugin</a> 插件，打印 Webpack 资产的 gzip 大小，以及自上次构建以来的变更。</li>
-        </div>
+        <MarkdownPreview value="**此脚手架**：基于 Vue-Cli3 所构建，延续早先[vue-boilerplate-template](https://github.com/nicejade/vue-boilerplate-template)项目所倡导，旨在探究更高效地构建优质 Vue 应用（推荐阅读[开箱即用的 Vue Webpack 脚手架模版](https://jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/)）；为此，有作以下工作：" />
+        <MarkdownPreview :value="newFunctionintroduceMd" />
       </div>
     </el-collapse-item>
     <el-collapse-item title="易于扩展" name="1">
@@ -49,12 +39,25 @@
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
-
 export default {
   data() {
     return {
-      activeNames: ['0', '1', '2', '3', '4', '5']
+      activeNames: ['0', '1', '2', '3', '4', '5'],
+      newFunctionintroduceMd: `
+- [x] 注入并配置 [Vue-router](https://router.vuejs.org/zh/)，使得构建单页面应用(SPA)变得易如反掌；
+- [x] 注入并配置 [Vuex](https://vuex.vuejs.org/zh/)，以方便处理应用程序开发的状态管理；
+- [x] 引入 [Element-ui](http://element.eleme.io/#/zh-CN)，以便快速搭建网站，而无需过多关注 UI；
+- [x] 引入 [Axios](https://github.com/axios/axios)并做封装，使得更优雅处理 Http 请求；
+- [x] 引入 [Dayjs](https://github.com/iamkun/dayjs)，使得以更小的代价，处理日期时间相关；
+- [x] 引入 [marked](https://github.com/markedjs/marked) 插件，并做封装，使得可以充作富文本编辑器；同时亦可借助它的解析功能，实现 \`Markdown\` 来绘制页面；
+- [x] 基于 Webepack 4.* 新增特性，作了优化，详见 \`vue.config.js\`；
+- [x] 开启 & 运用 [Jest](https://jestjs.io/) 对组件做单元测试，并附以 Demo 示例；
+- [x] 集成 [Prettier](https://prettier.io/) 插件并做配置，促使团队写出更好且风格一致的代码，具体参见[使用 ESLint ＆ Prettier美化Vue代码](https://jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/)；
+- [x] 注入 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) 插件，使得在单页面应用程序中预呈现静态 HTML，优化 SEO 以及首屏渲染。
+- [x] 注入 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)插件，使得运行 \`yarn analyz\`，即可直观得到构建包内容，以助优化；详情参见：[Webpack 打包优化之体积篇](https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/#%E5%AE%9A%E4%BD%8D-webpack-%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0)
+- [x] 注入 [size-plugin](https://github.com/GoogleChromeLabs/size-plugin)插件，使得在构建应用之时，可打印 Webpack 资产的 gzip 大小，以及自上次构建以来的变更。
+- [ ] 将此脚手架，结合 **Nginx** **Node.js**(Koa2) **MondoDb** **Redis**，汇融入于 **Docker**，使 Front-End Developer 可轻松构建整个 Web 应用。
+      `
     }
   },
 
@@ -62,9 +65,7 @@ export default {
     onHandleChange() {}
   },
 
-  components: {
-    VueMarkdown
-  }
+  components: {}
 }
 </script>
 
