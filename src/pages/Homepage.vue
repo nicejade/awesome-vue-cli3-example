@@ -2,47 +2,70 @@
 
 <template>
   <div class="homepage">
+    <h1 class="title">{{ titleText }}</h1>
     <img class="logo" src="@assets/images/logo.png">
-    <h1>{{ titleText }}</h1>
-     <p>
-      For guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://github.com/vuejs/vue-cli/tree/dev/docs" target="_blank">vue-cli3 documentation</a>.
+    <p class="description">
+      基于 vue-cli3 开箱即用的 Vue 脚手架模版，集成 webpack vuex vue-router element-ui 等周边生态工具，致力于探究更优质地构建 Vue 应用。
     </p>
-    <a href="/learn-more" class="learn-more">Learn More</a>
+    <div class="action-area">
+      <a href="https://cli.vuejs.org/zh/" target="_blank" rel="noreferrer noopener" class="find-more">Vue Cli3 文档</a>
+      <a href="/explore" class="find-more">发现更多</a>
+    </div>
+    <Instruction />
   </div>
 </template>
 
 <script>
+import Instruction from '@components/Instruction'
+
 export default {
   name: 'homepage',
 
   data() {
     return {
-      titleText: 'Welcome to Your Vue.js App'
+      titleText: 'Awesome Vue-Cli3 Example'
     }
   },
 
-  components: {}
+  components: {
+    Instruction
+  }
 }
 </script>
 
 <style lang="scss">
 .homepage {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   @include flex-box-center(column);
   .logo {
     width: 200px;
     margin: 0 auto;
     background-size: 100% 100%;
   }
-  .learn-more {
-    display: inline-block;
-    margin: 15px auto;
-    padding: 5px 16px;
-    border: 1px solid $border-grey;
-    border-radius: 30px;
+  .title {
+    font-size: $font-large;
+    margin: $font-medium auto;
+    font-weight: 600;
+  }
+  .description {
+    max-width: 36rem;
+    font-size: $font-medium;
+    line-height: 1.3;
+    color: $text-grey;
+    margin: $font-medium auto;
+  }
+  .action-area {
+    width: 100%;
+    max-width: 36rem;
+    @include flex-box-center(row, space-around) margin: 3 * $size-factor auto;
+    .find-more {
+      display: inline-block;
+      margin: 15px auto;
+      padding: 5px 16px;
+      border: 1px solid $border-grey;
+      border-radius: 30px;
+    }
   }
 }
 </style>

@@ -23,6 +23,9 @@ for (let key in Filters) {
 }
 
 /* ------------------------Vue Global Components------------------------------ */
+import ElementUI from 'element-ui'
+Vue.use(ElementUI)
+
 import Icon from '@components/Icon'
 Vue.component('icon', Icon)
 
