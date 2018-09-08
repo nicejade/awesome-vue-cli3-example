@@ -110,4 +110,26 @@ export default {
     min-width: 300px;
   }
 }
+
+@media (max-width: 768px) {
+  .edit-dialog {
+    width: 100%;
+    .el-dialog {
+      width: 90%;
+      margin-top: 2 * $size-factor !important;
+      .el-form-item__label,
+      .el-form-item__content {
+        display: block;
+        text-align: left;
+      }
+      .el-form-item__label {
+        width: 100%;
+      }
+      .el-input {
+        width: 100%;
+        min-width: 100px;
+      }
+    }
+  }
+}
 </style>

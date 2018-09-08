@@ -5,7 +5,7 @@
     <h1 class="title">{{ titleText }}</h1>
     <img class="logo" src="@assets/images/logo.png">
     <p class="description">
-      此为基于 <mark>vue-cli3</mark> 搭建的开箱即用脚手架模版，<br>致力于探究更高效地构建优质 <mark>Vue</mark> 应用。
+      此为基于 <mark>vue-cli3</mark> 搭建的开箱即用脚手架模版，<br v-if="isBigScreenFlag">致力于探究更高效地构建优质 <mark>Vue</mark> 应用。
     </p>
     <div class="action-area">
       <a href="https://cli.vuejs.org/zh/" target="_blank" rel="noreferrer noopener" class="find-more"><icon name="document"></icon>Vue Cli3 文档</a>
@@ -24,6 +24,7 @@ export default {
 
   data() {
     return {
+      isBigScreenFlag: window.innerWidth > 768,
       titleText: 'Awesome Vue-Cli3 Example'
     }
   },
@@ -38,6 +39,7 @@ export default {
 .homepage {
   width: 100%;
   height: 100%;
+  background-color: $white;
   @include flex-box-center(column);
   .logo {
     width: 200px;
@@ -70,6 +72,24 @@ export default {
       .svg-icon {
         margin-right: $size-factor;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    padding: 0 2 * $size-factor;
+    .logo {
+      width: 160px;
+    }
+    .description{
+      text-align: left;
+    }
+    .action-area {
+      margin: 2 * $size-factor auto;
+    }
+    .action-area {
+      @include flex-box-center(column);
     }
   }
 }

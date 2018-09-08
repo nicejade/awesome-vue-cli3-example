@@ -4,12 +4,12 @@
 
 <div align="center">
   <strong>
-    🍇(vue webpack vuex vue-router vue-i18n element-ui) out of the box
+    🦅 (Vue Webpack Vuex Vue-router Element-ui/...) out of the box
   </strong>
 </div>
 
 <div align="center">
- 🍑Awesome example for rapid Vue.js development using <a href="https://github.com/vuejs/vue-cli" target="_blank">vue-cli3</a>.
+ 🦅 Awesome example for rapid Vue.js development using <a href="https://github.com/vuejs/vue-cli" target="_blank">vue-cli3</a>.
 </div>
 
 <br>

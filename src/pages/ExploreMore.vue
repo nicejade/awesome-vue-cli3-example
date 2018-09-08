@@ -44,9 +44,9 @@
               @size-change="handleSizeChange"
               @current-change="handleCurrentChange"
               :current-page="currentPage"
-              :page-sizes="[20, 50, 100]"
-              :page-size="100" layout="total, sizes, prev, pager, next, jumper"
-              :total="200">
+              :page-sizes="[20, 50]"
+              :page-size="100" layout="total, sizes, prev, pager, next"
+              :total="1">
             </el-pagination>
           </div>
         </div>
@@ -153,8 +153,9 @@ export default {
 <style lang="scss">
 .explore-more {
   width: 100%;
+  max-width: 50rem;
   height: 100vh;
-  @include flex-box-center(row) max-width: 50rem;
+  @include flex-box-center(row);
   margin: 2 * $size-factor auto;
   .module-content {
     .table-operate {
@@ -205,6 +206,15 @@ export default {
       background-color: $brand;
       vertical-align: top;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-more {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
   }
 }
 </style>
