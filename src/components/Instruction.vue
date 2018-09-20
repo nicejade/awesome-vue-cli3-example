@@ -57,8 +57,8 @@ export default {
 - [x] 注入 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)  插件，使得在单页面应用程序中预呈现静态 HTML，优化 SEO 以及首屏渲染。
 - [x] 注入 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) 插件，使得运行 \`yarn analyz\`，即可直观得到构建包内容，以助优化；详情参见：[Webpack 打包优化之体积篇](https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/#%E5%AE%9A%E4%BD%8D-webpack-%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0)
 - [x] 注入 [size-plugin](https://github.com/GoogleChromeLabs/size-plugin) 插件，使得在构建应用之时，可打印 Webpack 资产的 gzip 大小，以及自上次构建以来的变更。
+- [x] 将此脚手架，结合 **Node.js**(Koa2) **Nginx** **MondoDb** **Redis**，汇融入于 **Docker**，使 Front-End Developer 可轻松构建整个 Web 应用；目前开源于 [Docker Vue Node Nginx Mongodb Redis](https://github.com/nicejade/docker-vue-node-nginx-mongodb-redis)。
 - [ ] 优化内置 \`Icon\`(Svg) 组件，使可以接收不同方式输入，并将 Svg 提取至单独文件中，以避免资源重复加载；
-- [ ] 将此脚手架，结合 **Node.js**(Koa2) **Nginx** **MondoDb** **Redis**，汇融入于 **Docker**，使 Front-End Developer 可轻松构建整个 Web 应用。
       `
     }
   },

@@ -10,7 +10,7 @@
     <div class="action-area">
       <a href="https://cli.vuejs.org/zh/" target="_blank" rel="noreferrer noopener" class="find-more"><icon name="document"></icon>Vue Cli3 文档</a>
       <a href="/explore" class="find-more"><icon name="explore"></icon>发现更多</a>
-      <a class="find-more" href="https://github.com/nicejade/" target="_blank" rel="noreferrer noopener"><icon name="github"></icon> GitHub 源码</a>
+      <a class="find-more" href="https://github.com/nicejade/awesome-vue-cli3-example" target="_blank" rel="noreferrer noopener"><icon name="github"></icon> GitHub 源码</a>
     </div>
     <Instruction />
   </div>
