@@ -24,6 +24,7 @@
   <a href="https://github.com/nicejade/vue-boilerplate-template">
     <img src="https://img.shields.io/github/license/nicejade/vue-boilerplate-template.svg" alt="LICENSE">
   </a>
+  <a href="https://about.me/nicejade"><img src="https://img.shields.io/badge/Author-nicejade-%23a696c8.svg" alt="Author nicejade"></a>
 </div>
 
 ## Goal and Philosophy
