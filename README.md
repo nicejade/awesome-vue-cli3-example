@@ -16,7 +16,7 @@
 
 <div align="center">
   <a href="https://circleci.com/gh/nicejade/awesome-vue-cli3-example">
-    <img src="https://img.shields.io/circleci/project/nicejade/awesome-vue-cli3-example.svg" alt="Build Status">
+    <img src="https://circleci.com/gh/nicejade/awesome-vue-cli3-example/tree/master.svg?style=svg" alt="Build Status">
   </a>
   <a href="https://nodejs.org/en/">
     <img src="https://img.shields.io/badge/node-%3E%3D%206.11.5-brightgreen.svg" alt="NodeJs">
