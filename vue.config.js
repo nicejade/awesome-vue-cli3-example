@@ -66,6 +66,7 @@ module.exports = {
       .set('@pages', resolveRealPath('src/pages'))
       .set('@assets', resolveRealPath('src/assets'))
       .set('@router', resolveRealPath('src/router'))
+      .set('@mixins', resolveRealPath('src/mixins'))
       .set('@components', resolveRealPath('src/components'))
 
     // remove the old loader & add new one

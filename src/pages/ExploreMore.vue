@@ -62,14 +62,20 @@
 
 <script>
 import EditDialog from '@components/EditDialog'
+import metaMixin from '@mixins/metaMixin.js'
 
 export default {
   name: 'ExploreMore',
+
+  mixins: [metaMixin],
 
   props: {},
 
   data() {
     return {
+      title: '发现更多',
+      description:
+        '个人作品集，倾城之链，晚晴幽草轩，静晴轩别苑，天意人间舫，Vue-Cli3 实践参考',
       tableData: [
         {
           name: '倾城之链',

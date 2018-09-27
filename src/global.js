@@ -32,6 +32,9 @@ Vue.component('Markdown', Markdown)
 import MarkdownPreview from '@components/markdown/MarkdownPreview'
 Vue.component('MarkdownPreview', MarkdownPreview)
 
+import VueMeta from 'vue-meta'
+Vue.use(VueMeta)
+
 import Icon from '@components/Icon'
 Vue.component('icon', Icon)
 

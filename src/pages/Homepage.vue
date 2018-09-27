@@ -18,9 +18,12 @@
 
 <script>
 import Instruction from '@components/Instruction'
+import metaMixin from '@mixins/metaMixin.js'
 
 export default {
   name: 'homepage',
+
+  mixins: [metaMixin],
 
   data() {
     return {
