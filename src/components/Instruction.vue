@@ -52,6 +52,7 @@ export default {
 - [x] 引入 [Dayjs](https://github.com/iamkun/dayjs)，使得以更小的代价，处理日期时间相关；
 - [x] 引入 [marked](https://github.com/markedjs/marked) 插件，并做封装，使得可以充作富文本编辑器；同时亦可借助它的解析功能，实现 \`Markdown\` 来绘制页面；
 - [x] 基于 Webepack 4.* 新增特性，作了优化，详见 \`vue.config.js\`；
+- [x] 引入 [vue-meta](https://github.com/declandewet/vue-meta) 插件以便允许您管理应用的元信息，支持 \`SSR\` + \`Streaming\`，就像 [react-helmet](https://github.com/nfl/react-helmet) 对 React 一样，它对 \`SEO\` 很棒。
 - [x] 开启 & 运用 [Jest](https://jestjs.io/) 对组件做单元测试，并附以 Demo 示例；
 - [x] 集成 [Prettier](https://prettier.io/) 插件并做配置，促使团队写出更好且风格一致的代码，具体参见[使用 ESLint ＆ Prettier美化Vue代码](https://jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/)；
 - [x] 注入 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)  插件，使得在单页面应用程序中预呈现静态 HTML，优化 SEO 以及首屏渲染。
