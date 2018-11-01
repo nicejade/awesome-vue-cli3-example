@@ -5,10 +5,11 @@
     <div class="module-content">
       <div class="panel panel-default">
         <div class="panel-body">
+          <div class="back-tip">返回<a href="/">Vue-Cli3 脚手架模版</a>首页</div>
           <el-table :data="tableData" border stripe highlight-current-row>
-            <el-table-column prop="name" label="作品名称" width="150">
+            <el-table-column prop="name" label="作品名称" width="120">
             </el-table-column>
-            <el-table-column prop="address" label="在线地址" width="220">
+            <el-table-column prop="address" label="在线地址" width="210">
               <template slot-scope="scope">
                 <a :href="scope.row.address"
                   target="_blank" rel="noreferrer noopener">
@@ -17,12 +18,12 @@
               </template>
             </el-table-column>
             <el-table-column prop="description" label="作品描述"
-              show-overflow-tooltip min-width="120">
+              show-overflow-tooltip min-width="160">
               <template slot-scope="scope">
                 <span v-html="scope.row.description"></span>
               </template>
             </el-table-column>
-            <el-table-column prop="date" label="上线日期" width="120">
+            <el-table-column prop="date" label="上线日期" width="100">
             </el-table-column>
             <el-table-column label="操作" width="180">
               <template slot-scope="scope">
@@ -99,6 +100,13 @@ export default {
           date: '2018-05-26'
         },
         {
+          name: '吾意静晴轩',
+          address: 'https://docz.lovejade.cn/',
+          description:
+            '吾意静晴轩的诞生，是为了体验采用 Docz 构建 Web 应用程序；同时，为便捷而优雅的创建 Web 应用提供些参考。',
+          date: '2018-08-20'
+        },
+        {
           name: '天意人间舫',
           address: 'https://blog.lovejade.cn/',
           description:
@@ -106,7 +114,7 @@ export default {
           date: '2016-01-20'
         },
         {
-          name: 'Vue-Cli3 实践参考',
+          name: 'Vue-Cli3 实践',
           address: 'https://vue-cli3.lovejade.cn/',
           description:
             'Awesome example for rapid Vue.js development using vue-cli3. (vue webpack vuex vue-router vue-i18n element-ui) out of the box.',
@@ -159,11 +167,15 @@ export default {
 <style lang="scss">
 .explore-more {
   width: 100%;
-  max-width: 50rem;
+  max-width: 56rem;
   height: 100vh;
   @include flex-box-center(row);
   margin: 2 * $size-factor auto;
   .module-content {
+    width: 100%;
+    .back-tip {
+      margin: 2 * $size-factor auto;
+    }
     .table-operate {
       margin-top: 15px;
     }

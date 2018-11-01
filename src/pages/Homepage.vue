@@ -3,7 +3,7 @@
 <template>
   <div class="homepage">
     <h1 class="title">{{ titleText }}</h1>
-    <img class="logo" src="@assets/images/logo.png">
+    <img class="logo" src="@assets/images/logo.png" alt="Vue-Cli3 脚手架模版">
     <p class="description">
       此为基于 <mark>Vue-Cli3</mark> 搭建的开箱即用 Vue 脚手架模版，<br v-if="isBigScreenFlag">致力于探究更高效地构建优质 Web 应用。
     </p>
