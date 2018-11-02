@@ -3,18 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "yarn serve",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "bash ./commands/deploy.sh",
-    "start": "yarn serve",
-    "clear-commit-msg": "bash ./commands/clear-commit-msg.sh",
-    "preview": "node ./commands/preview.js",
     "test:unit": "vue-cli-service test:unit",
-    "precommit-msg": "echo '🐉 Start pre-commit checks...' && exit 0",
+    "deploy": "bash ./commands/deploy.sh",
+    "analyz": "NODE_ENV=production  npm_config_report=true npm run build",
+    "clear-commit-msg": "bash ./commands/clear-commit-msg.sh",
     "eslint-fix": "eslint src/**/**/*.vue --fix",
     "format-code": "prettier-eslint --write \"src/**/*.js\" \"src/**/*.vue\"",
-    "analyz": "NODE_ENV=production  npm_config_report=true npm run build"
+    "precommit-msg": "echo '🐉 Start pre-commit checks...' && exit 0",
+    "preview": "node ./commands/preview.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -24,6 +24,7 @@
     "lodash": "^4.17.11",
     "marked": "^0.5.0",
     "q": "^1.5.1",
+    "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-meta": "^1.5.4",
     "vue-router": "^3.0.1",
@@ -32,8 +33,9 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.0",
     "@vue/cli-plugin-eslint": "^3.1.0",
-    "@vue/cli-service": "^3.1.0",
+    "@vue/cli-plugin-pwa": "^3.1.0",
     "@vue/cli-plugin-unit-jest": "^3.1.0",
+    "@vue/cli-service": "^3.1.0",
     "@vue/test-utils": "^1.0.0-beta.25",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
@@ -43,7 +45,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "node-sass": "^4.9.0",
-    "prerender-spa-plugin": "^3.2.1",
+    "prerender-spa-plugin": "3.2.0",
     "prettier-eslint-cli": "^4.7.1",
     "sass-loader": "^7.0.1",
     "size-plugin": "^1.0.0",
@@ -113,6 +115,9 @@
     "last 2 versions",
     "not ie <= 8"
   ],
+  "eslintIgnore": [
+    "package.json"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn run precommit-msg && lint-staged"
@@ -123,8 +128,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "eslintIgnore": [
-    "package.json"
-  ]
+  }
 }
