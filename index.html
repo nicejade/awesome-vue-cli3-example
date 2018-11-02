@@ -1,0 +1,195 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>首页 - Vue-Cli3 实践参考</title><meta name="keywords" content="vue,vue-cli3,webpack,vuex,vue-router,element-ui,TypeScript,ESLint,Prettier,Dayjs,Markdown,Jest,PWA,开箱即用,脚手架,模板"><link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-86109050-2"></script><script>window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-86109050-2');</script><link href="/css/chunk-4552f9ae.d15fab60.css" rel="prefetch"><link href="/css/chunk-aea9e572.6ee35604.css" rel="prefetch"><link href="/js/chunk-4552f9ae.35e9747b.js" rel="prefetch"><link href="/js/chunk-aea9e572.d8c93f85.js" rel="prefetch"><link href="/css/app.fba487c0.css" rel="preload" as="style"><link href="/js/app.1f41f7fe.js" rel="preload" as="script"><link href="/js/element.992944a9.js" rel="preload" as="script"><link href="/css/app.fba487c0.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="/img/icons/fuji-mountain-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/icons/fuji-mountain-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="apple-mobile-web-app-title" content="Vue-Cli3 实践"><link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"><link rel="stylesheet" type="text/css" href="/css/chunk-4552f9ae.d15fab60.css"><script charset="utf-8" src="/js/chunk-4552f9ae.35e9747b.js"></script><meta data-vmid="title" name="title" content="首页 - Vue-Cli3 实践参考" data-vue-meta="true"><meta data-vmid="keywords" name="keywords" content="vue,vue-cli3,webpack,vuex,vue-router,element-ui,TypeScript,ESLint,Prettier,Dayjs,Markdown,Jest,PWA,开箱即用,脚手架,模板" data-vue-meta="true"><meta data-vmid="description" name="description" content="此为基于 Vue-Cli3 搭建的开箱即用 Vue 脚手架模版，致力于探究更高效地构建优质 Web 应用。" data-vue-meta="true"><meta data-vmid="og:type" property="og:type" content="website" data-vue-meta="true"><meta data-vmid="og:title" property="og:title" content="首页 - Vue-Cli3 实践参考" data-vue-meta="true"><meta data-vmid="og:image" property="og:image" content="https://nice.lovejade.cn/logo.png" data-vue-meta="true"><meta data-vmid="og:keywords" property="og:keywords" content="vue,vue-cli3,webpack,vuex,vue-router,element-ui,TypeScript,ESLint,Prettier,Dayjs,Markdown,Jest,PWA,开箱即用,脚手架,模板" data-vue-meta="true"><meta data-vmid="og:description" property="og:description" content="此为基于 Vue-Cli3 搭建的开箱即用 Vue 脚手架模版，致力于探究更高效地构建优质 Web 应用。" data-vue-meta="true"></head><body><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0" id="__SVG_SPRITE_NODE__"><symbol viewBox="0 0 964.07 964.07" id="author">
+<g>
+	<path d="M850.662,877.56c-0.77,0.137-4.372,0.782-10.226,1.831c-230.868,41.379-273.337,48.484-278.103,49.037   c-11.37,1.319-19.864,0.651-25.976-2.042c-3.818-1.682-5.886-3.724-6.438-4.623c0.268-1.597,2.299-5.405,3.539-7.73   c1.207-2.263,2.574-4.826,3.772-7.558c7.945-18.13,2.386-36.521-14.51-47.999c-12.599-8.557-29.304-12.03-49.666-10.325   c-12.155,1.019-225.218,36.738-342.253,56.437l-57.445,45.175c133.968-22.612,389.193-65.433,402.622-66.735   c11.996-1.007,21.355,0.517,27.074,4.4c3.321,2.257,2.994,3.003,2.12,4.997c-0.656,1.497-1.599,3.264-2.596,5.135   c-3.835,7.189-9.087,17.034-7.348,29.229c1.907,13.374,11.753,24.901,27.014,31.626c8.58,3.78,18.427,5.654,29.846,5.654   c4.508,0,9.261-0.292,14.276-0.874c9.183-1.065,103.471-17.67,280.244-49.354c5.821-1.043,9.403-1.686,10.169-1.821   c9.516-1.688,15.861-10.772,14.172-20.289S860.183,875.87,850.662,877.56z" fill="#333333"></path>
+	<path d="M231.14,707.501L82.479,863.005c-16.373,17.127-27.906,38.294-33.419,61.338l211.087-166.001   c66.081,29.303,118.866,38.637,159.32,38.637c71.073,0,104.065-28.826,104.065-28.826c-66.164-34.43-75.592-98.686-75.592-98.686   c50.675,21.424,156.235,46.678,156.235,46.678c140.186-93.563,213.45-296.138,213.45-296.138   c-14.515,3.99-28.395,5.652-41.475,5.652c-65.795,0-111-42.13-111-42.13l183.144-39.885C909.186,218.71,915.01,0,915.01,0   L358.176,495.258C295.116,551.344,250.776,625.424,231.14,707.501z" fill="#333333"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</symbol><symbol viewBox="0 0 47 47" id="document">
+<g>
+	<g id="document_Layer_1_155_">
+		<g>
+			<path d="M26.198,8.368H10.176c-1.18,0-2.137,0.957-2.137,2.136c0,1.179,0.957,2.136,2.137,2.136h16.022     c1.182,0,2.137-0.957,2.137-2.136C28.334,9.325,27.379,8.368,26.198,8.368z"></path>
+			<path d="M28.334,18.515c0-1.18-0.955-2.136-2.137-2.136H10.176c-1.18,0-2.137,0.957-2.137,2.136c0,1.18,0.957,2.137,2.137,2.137     h16.022C27.379,20.652,28.334,19.695,28.334,18.515z"></path>
+			<path d="M18.188,28.663c1.18,0,2.136-0.957,2.136-2.136c0-1.18-0.956-2.137-2.136-2.137h-8.012c-1.18,0-2.137,0.957-2.137,2.137     s0.957,2.136,2.137,2.136H18.188z"></path>
+			<path d="M34.314,35.93l-2.241,1.479v5.318H4.301V4.273h27.772v8.442l4.273-7.401V2.136c0-1.18-0.957-2.136-2.137-2.136H2.164     c-1.18,0-2.136,0.957-2.136,2.136v42.729c0,1.18,0.956,2.136,2.136,2.136h32.045c1.181,0,2.138-0.957,2.138-2.136V33.09     l-1.021,1.766C35.077,35.287,34.727,35.658,34.314,35.93z"></path>
+			<path d="M46.947,9.894c-0.044-0.192-0.495-1.918-3.213-3.488c-2.718-1.569-4.438-1.097-4.628-1.038     c-0.255,0.081-0.47,0.253-0.604,0.485L25.15,28.979c-0.083,0.145-0.132,0.306-0.142,0.472l-0.5,8.345     c-0.024,0.404,0.182,0.786,0.531,0.989c0.352,0.202,0.785,0.188,1.123-0.033l6.977-4.606c0.139-0.09,0.254-0.213,0.337-0.356     L46.829,10.66C46.963,10.428,47.004,10.156,46.947,9.894z M28.854,35.055c-0.355-0.287-0.758-0.558-1.191-0.809     c-0.435-0.251-0.871-0.462-1.297-0.628l0.149-2.502c0.557,0.073,1.383,0.299,2.432,0.903c1.048,0.605,1.655,1.209,1.999,1.654     L28.854,35.055z"></path>
+			<path d="M14.922,38.534c0.07,0.429,0.565,0.562,0.896,0.7c0.32,0.135,0.702-0.121,0.968-0.25c1.63-0.793,3.838,0.139,5.584,0.139     c1.033,0,1.033-1.602,0-1.602c-2.036,0-3.73-0.515-5.748-0.182c0-0.117-0.043-0.275-0.169-0.49     c-0.377-0.645-0.857-0.828-1.338-0.75c-0.032-0.076-0.063-0.152-0.108-0.229c-0.126-0.206-0.302-0.309-0.5-0.352     c0.563-0.984,0.926-2.025,0.557-2.867c-0.113-0.256-0.434-0.387-0.692-0.397c-1.07-0.04-1.988,1.083-2.676,1.757     c-1.721,1.687-3.237,3.602-4.704,5.508c-0.63,0.819,0.763,1.615,1.383,0.81c1.3-1.688,2.677-3.327,4.159-4.86     c-0.357,0.586-0.736,1.161-1.135,1.715c-0.57,0.881,0.791,1.631,1.383,0.809c0.141-0.215,0.32-0.37,0.516-0.503     c-0.039,0.099-0.079,0.196-0.119,0.296c0.002,0,0.004,0.001,0.006,0.002c-0.031,0.064-0.062,0.128-0.087,0.189     c-0.358,0.897,0.979,1.308,1.465,0.616c0.123-0.174,0.237-0.36,0.34-0.555C14.896,38.172,14.893,38.352,14.922,38.534z"></path>
+		</g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</symbol><symbol viewBox="0 0 512 512" id="explore">
+<circle style="fill:#FFC61B;" cx="256" cy="256" r="256"></circle>
+<path style="fill:#EAA22F;" d="M509.095,294.662L362.929,148.496L213.585,303.911l-64.683,59.439l146.235,145.677  C405.344,492.118,492.391,404.933,509.095,294.662z"></path>
+<circle style="fill:#FFFFFF;" cx="256" cy="256" r="142.222"></circle>
+<path style="fill:#D0D1D3;" d="M256,113.778c-0.193,0-0.381,0.014-0.574,0.014v284.415c0.193,0,0.381,0.014,0.574,0.014  c78.548,0,142.222-63.676,142.222-142.222S334.548,113.778,256,113.778z"></path>
+<path style="fill:#FF7F4F;" d="M256,104.296c-83.649,0-151.704,68.055-151.704,151.704S172.351,407.704,256,407.704  S407.704,339.649,407.704,256S339.649,104.296,256,104.296z M350.613,246.519c-0.615-16.27-2.801-32.063-6.458-46.887  c2.577,1.329,5.106,2.703,7.532,4.16c19.952,11.971,32.385,26.879,35.955,42.727H350.613z M331.636,246.519h-66.155v-66.155  c20.009,0.815,39.121,4.201,56.256,9.897C327.435,207.398,330.821,226.509,331.636,246.519z M265.481,161.387v-37.029  c15.848,3.568,30.756,16.001,42.727,35.954c1.457,2.427,2.829,4.954,4.158,7.532C297.544,164.186,281.752,162.002,265.481,161.387z   M246.519,124.357v37.03c-16.27,0.615-32.063,2.801-46.887,6.458c1.329-2.577,2.703-5.104,4.158-7.532  C215.762,140.359,230.671,127.926,246.519,124.357z M246.519,180.364v66.155h-66.155c0.815-20.009,4.201-39.121,9.897-56.258  C207.398,184.565,226.509,181.179,246.519,180.364z M161.387,246.519h-37.029c3.568-15.848,16.001-30.756,35.956-42.727  c2.427-1.457,4.954-2.829,7.532-4.16C164.186,214.456,162.002,230.248,161.387,246.519z M161.387,265.481  c0.615,16.27,2.801,32.063,6.458,46.887c-2.577-1.329-5.106-2.703-7.532-4.16c-19.954-11.971-32.387-26.879-35.955-42.727H161.387z   M180.364,265.481h66.155v66.155c-20.009-0.815-39.121-4.201-56.256-9.897C184.565,304.602,181.179,285.491,180.364,265.481z   M246.519,350.613v37.029c-15.848-3.568-30.756-16.001-42.727-35.954c-1.457-2.427-2.829-4.954-4.158-7.532  C214.456,347.813,230.248,349.998,246.519,350.613z M265.481,387.643v-37.029c16.27-0.615,32.063-2.801,46.887-6.458  c-1.329,2.577-2.703,5.104-4.158,7.532C296.238,371.641,281.329,384.074,265.481,387.643z M265.481,331.636v-66.155h66.155  c-0.815,20.009-4.201,39.121-9.897,56.258C304.602,327.435,285.491,330.821,265.481,331.636z M350.613,265.481h37.029  c-3.568,15.848-16.001,30.756-35.955,42.727c-2.427,1.457-4.954,2.829-7.532,4.16C347.813,297.544,349.998,281.752,350.613,265.481z   M374.65,196.587c-4.065-3.165-8.444-6.201-13.205-9.057c-7.671-4.603-16.031-8.623-24.904-12.071  c-3.448-8.873-7.468-17.234-12.071-24.904c-2.857-4.76-5.892-9.14-9.057-13.205C340.961,150.197,361.805,171.041,374.65,196.587z   M196.587,137.35c-3.165,4.065-6.201,8.444-9.057,13.205c-4.603,7.67-8.623,16.031-12.071,24.904  c-8.875,3.448-17.234,7.47-24.904,12.071c-4.76,2.857-9.14,5.892-13.205,9.057C150.197,171.041,171.041,150.197,196.587,137.35z   M137.35,315.413c4.065,3.165,8.444,6.201,13.205,9.057c7.67,4.603,16.031,8.623,24.904,12.071  c3.448,8.873,7.468,17.234,12.071,24.904c2.857,4.76,5.892,9.14,9.057,13.205C171.041,361.805,150.197,340.959,137.35,315.413z   M315.413,374.65c3.165-4.065,6.201-8.444,9.057-13.205c4.603-7.67,8.623-16.031,12.071-24.904  c8.875-3.448,17.234-7.468,24.904-12.071c4.76-2.857,9.14-5.892,13.205-9.057C361.805,340.959,340.961,361.805,315.413,374.65z"></path>
+<path style="fill:#D35933;" d="M256,104.296c-0.191,0-0.383,0.007-0.574,0.007v303.394c0.191,0,0.383,0.007,0.574,0.007  c83.649,0,151.704-68.055,151.704-151.704S339.649,104.296,256,104.296z M374.65,196.587c-4.065-3.165-8.444-6.201-13.205-9.057  c-7.671-4.603-16.031-8.623-24.904-12.071c-3.448-8.873-7.468-17.234-12.071-24.904c-2.857-4.76-5.892-9.14-9.057-13.205  C340.961,150.197,361.805,171.041,374.65,196.587z M387.643,246.519h-37.029c-0.615-16.27-2.801-32.063-6.458-46.887  c2.577,1.329,5.106,2.703,7.532,4.16C371.641,215.762,384.074,230.671,387.643,246.519z M265.481,124.357  c15.848,3.568,30.756,16.001,42.727,35.954c1.457,2.427,2.829,4.954,4.158,7.532c-14.824-3.656-30.617-5.841-46.887-6.458v-37.028  H265.481z M265.481,180.364c20.009,0.815,39.121,4.201,56.256,9.897c5.696,17.137,9.082,36.247,9.897,56.258h-66.153V180.364z   M265.481,265.481h66.155c-0.815,20.009-4.201,39.121-9.897,56.258c-17.137,5.696-36.247,9.082-56.256,9.897v-66.155H265.481z   M308.208,351.689c-11.971,19.952-26.879,32.385-42.727,35.954v-37.029c16.27-0.615,32.063-2.801,46.887-6.458  C311.037,346.734,309.665,349.262,308.208,351.689z M315.413,374.65c3.165-4.065,6.201-8.444,9.057-13.205  c4.603-7.67,8.623-16.031,12.071-24.904c8.875-3.448,17.234-7.468,24.904-12.071c4.76-2.857,9.14-5.892,13.205-9.057  C361.805,340.959,340.961,361.805,315.413,374.65z M351.689,308.208c-2.427,1.457-4.954,2.829-7.532,4.16  c3.656-14.824,5.841-30.617,6.458-46.887h37.029C384.074,281.329,371.641,296.238,351.689,308.208z"></path>
+<path style="fill:#273B7A;" d="M375.884,426.667c-5.718,0-11.433-2.181-15.794-6.542l-91.981-91.982  c-8.725-8.723-8.725-22.866,0-31.589c8.725-8.726,22.868-8.726,31.589,0l91.981,91.982c8.725,8.723,8.725,22.866,0,31.589  C387.319,424.486,381.6,426.667,375.884,426.667z"></path>
+<path style="fill:#121149;" d="M268.109,296.551c-8.725,8.723-8.725,22.866,0,31.589l91.982,91.982  c4.361,4.363,10.076,6.542,15.794,6.542c5.716,0,11.435-2.181,15.794-6.542c0.048-0.048,0.088-0.102,0.136-0.152L268.26,296.415  C268.21,296.464,268.157,296.503,268.109,296.551z"></path>
+<circle style="fill:#71E2EF;" cx="253.242" cy="281.686" r="65.041"></circle>
+<path style="fill:#38C6D9;" d="M207.398,235.554c-0.048,0.048-0.1,0.091-0.148,0.14c-25.4,25.4-25.4,66.582,0,91.982  c25.4,25.4,66.582,25.4,91.982,0c0.048-0.048,0.091-0.1,0.14-0.148L207.398,235.554z"></path>
+<path style="fill:#386895;" d="M253.242,357.204c-19.351,0-38.695-7.363-53.426-22.094c-29.458-29.46-29.458-77.39,0-106.848  c29.46-29.456,77.391-29.456,106.849,0c14.27,14.27,22.128,33.244,22.128,53.426c0,20.18-7.858,39.153-22.13,53.424  C291.938,349.837,272.587,357.204,253.242,357.204z M253.242,227.183c-13.964,0-27.929,5.315-38.559,15.946  c-21.261,21.261-21.261,55.855,0,77.115c21.259,21.263,55.856,21.263,77.115,0c10.3-10.299,15.972-23.992,15.972-38.557  c0-14.565-5.672-28.26-15.972-38.559C281.169,232.498,267.205,227.183,253.242,227.183z"></path>
+<path style="fill:#273B7A;" d="M291.94,320.097c-0.048,0.048-0.091,0.1-0.14,0.147c-21.259,21.261-55.856,21.261-77.115,0  c-21.261-21.261-21.261-55.855,0-77.115c0.048-0.048,0.1-0.093,0.148-0.141l-14.867-14.867c-0.048,0.048-0.1,0.091-0.148,0.14  c-29.458,29.46-29.458,77.39,0,106.848c14.731,14.731,34.075,22.094,53.426,22.094c19.346,0,38.697-7.366,53.424-22.094  c0.048-0.048,0.093-0.1,0.141-0.148L291.94,320.097z"></path>
+<g>
+	<path style="fill:#386895;" d="M305.736,374.698c-2.522,0-5.044-0.962-6.97-2.886c-3.848-3.849-3.848-10.088,0-13.938   l30.661-30.661c3.849-3.848,10.088-3.848,13.938,0c3.848,3.849,3.848,10.088,0,13.938l-30.661,30.661   C310.781,373.734,308.257,374.698,305.736,374.698z"></path>
+	<path style="fill:#386895;" d="M345.224,414.184c-2.522,0-5.044-0.962-6.968-2.886c-3.849-3.848-3.849-10.088-0.002-13.936   l30.661-30.661c3.851-3.851,10.09-3.848,13.936-0.002c3.849,3.848,3.849,10.088,0.002,13.936l-30.66,30.661   C350.268,413.222,347.746,414.184,345.224,414.184z"></path>
+</g>
+<g>
+	<path style="fill:#273B7A;" d="M314.242,342.399l-15.476,15.476c-3.848,3.849-3.848,10.088,0,13.938   c1.924,1.924,4.448,2.886,6.968,2.886s5.044-0.962,6.968-2.886l15.475-15.475L314.242,342.399z"></path>
+	<path style="fill:#273B7A;" d="M353.73,381.886l-15.474,15.476c-3.848,3.848-3.848,10.088,0.002,13.936   c1.924,1.924,4.444,2.886,6.968,2.886c2.522,0,5.044-0.962,6.968-2.888l15.474-15.474L353.73,381.886z"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</symbol><symbol class="icon" viewBox="0 0 1024 1024" id="github"><defs><style type="text/css"></style></defs><path d="M941.714 512q0 143.433-83.712 258.011t-216.283 158.574q-15.433 2.853-22.565-3.986t-7.131-17.152v-120.576q0-55.442-29.696-81.152 32.585-3.438 58.587-10.277t53.723-22.272 46.299-37.998 30.281-60.014 11.703-86.016q0-69.157-45.129-117.723 21.138-52.005-4.571-116.553-16.018-5.157-46.299 6.29t-52.553 25.161l-21.723 13.714q-53.138-14.848-109.714-14.848t-109.714 14.848q-9.143-6.29-24.283-15.433t-47.726-22.016-49.152-7.717q-25.161 64.585-3.986 116.553-45.129 48.567-45.129 117.723 0 48.567 11.703 85.723t29.989 60.014 46.007 38.29 53.723 22.272 58.587 10.277q-22.857 20.553-28.014 58.843-11.995 5.705-25.71 8.558t-32.585 2.853-37.413-12.288-31.707-35.73q-10.862-18.286-27.721-29.696t-28.27-13.714l-11.447-1.719q-11.995 0-16.567 2.56t-2.853 6.583 5.157 8.009 7.424 6.839l3.986 2.853q12.581 5.705 24.869 21.723t17.993 29.147l5.705 13.129q7.424 21.723 25.161 35.145t38.29 17.152 39.717 3.986 31.707-2.011l13.129-2.304q0 21.723 0.293 50.871t0.293 30.866q0 10.277-7.424 17.152t-22.857 3.986q-132.571-43.995-216.283-158.574t-83.712-258.011q0-119.442 58.843-220.27t159.707-159.707 220.27-58.843 220.27 58.843 159.707 159.707 58.843 220.27z" p-id="4151" fill="#333333"></path></symbol></svg><noscript><strong>We're sorry but vue-cli-overall-example doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="homepage"><h1 class="title">Awesome Vue-Cli3 ExamplE</h1><img src="/img/logo.82b9c7a5.png" alt="Vue-Cli3 脚手架模版" class="logo"><p class="description">
+    此为基于 <mark>Vue-Cli3</mark> 搭建的开箱即用 Vue 脚手架模版，<br>致力于探究更高效地构建优质 Web 应用。
+  </p><div class="action-area"><a href="https://cli.vuejs.org/zh/" target="_blank" rel="noreferrer noopener" class="find-more"><svg class="svg-icon icon-document"><use xlink:href="#document"></use></svg>Vue Cli3 文档</a><a href="/explore" class="find-more"><svg class="svg-icon icon-explore"><use xlink:href="#explore"></use></svg>发现更多</a><a href="https://github.com/nicejade/awesome-vue-cli3-example" target="_blank" rel="noreferrer noopener" class="find-more"><svg class="svg-icon icon-github"><use xlink:href="#github"></use></svg> GitHub 源码</a></div><div class="instruction-area"><h2 class="title">功能详述</h2><div role="tablist" aria-multiselectable="true" class="el-collapse"><div class="el-collapse-item is-active"><div role="tab" aria-expanded="true" aria-controls="el-collapse-content-8919" aria-describedby="el-collapse-content-8919"><div role="button" id="el-collapse-head-8919" tabindex="0" class="el-collapse-item__header is-active"><i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>功能丰富</div></div><div role="tabpanel" aria-labelledby="el-collapse-head-8919" id="el-collapse-content-8919" class="el-collapse-item__wrap"><div class="el-collapse-item__content"><div><strong>Vue-Cli3</strong>：对 Babel、TypeScript、ESLint、PostCSS、PWA、单元测试和 End-to-end 测试提供开箱即用的支持。</div><div class="extra-instruction"><div class="markdown-body"><p><strong>此脚手架</strong>：基于 Vue-Cli3 所构建，延续早先<a href="https://github.com/nicejade/vue-boilerplate-template">vue-boilerplate-template</a>项目所倡导，旨在探究更高效地构建优质 Web 应用（推荐阅读<a href="https://jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/">开箱即用的 Vue Webpack 脚手架模版</a>）；为此，有作以下工作：</p>
+</div><div class="markdown-body"><ul>
+<li><input checked="" disabled="" type="checkbox"> 导入并配置 <a href="https://router.vuejs.org/zh/">Vue-router</a>，使得构建单页面应用(SPA)变得易如反掌；</li>
+<li><input checked="" disabled="" type="checkbox"> 导入并配置 <a href="https://vuex.vuejs.org/zh/">Vuex</a>，以方便处理应用程序开发的状态管理；</li>
+<li><input checked="" disabled="" type="checkbox"> 引入 <a href="http://element.eleme.io/#/zh-CN">Element-ui</a>，以便快速搭建网站，而无需过多关注 UI；</li>
+<li><input checked="" disabled="" type="checkbox"> 引入 <a href="https://github.com/axios/axios">Axios</a>并做封装，使得更优雅处理 Http 请求；</li>
+<li><input checked="" disabled="" type="checkbox"> 引入 <a href="https://github.com/iamkun/dayjs">Dayjs</a>，使得以更小的代价，处理日期时间相关；</li>
+<li><input checked="" disabled="" type="checkbox"> 引入 <a href="https://github.com/markedjs/marked">marked</a> 插件，并做封装，使得可以充作富文本编辑器；同时亦可借助它的解析功能，实现 <code>Markdown</code> 来绘制页面；</li>
+<li><input checked="" disabled="" type="checkbox"> 基于 Webepack 4.* 新增特性，作了优化，详见 <code>vue.config.js</code>；</li>
+<li><input checked="" disabled="" type="checkbox"> 引入 <a href="https://github.com/declandewet/vue-meta">vue-meta</a> 插件以便允许您管理应用的元信息，支持 <code>SSR</code> + <code>Streaming</code>，就像 <a href="https://github.com/nfl/react-helmet">react-helmet</a> 对 React 一样，它对 <code>SEO</code> 很棒。</li>
+<li><input checked="" disabled="" type="checkbox"> 开启 &amp; 运用 <a href="https://jestjs.io/">Jest</a> 对组件做单元测试，并附以 Demo 示例；</li>
+<li><input checked="" disabled="" type="checkbox"> 集成 <a href="https://prettier.io/">Prettier</a> 插件并做配置，促使团队写出更好且风格一致的代码，具体参见<a href="https://jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/">使用 ESLint ＆ Prettier美化Vue代码</a>；</li>
+<li><input checked="" disabled="" type="checkbox"> 导入 <a href="https://github.com/chrisvfritz/prerender-spa-plugin">prerender-spa-plugin</a>  插件，使得在单页面应用程序中预呈现静态 HTML，优化 SEO 以及首屏渲染。</li>
+<li><input checked="" disabled="" type="checkbox"> 导入 <a href="https://github.com/webpack-contrib/webpack-bundle-analyzer">webpack-bundle-analyzer</a> 插件，使得运行 <code>yarn analyz</code>，即可直观得到构建包内容，以助优化；详情参见：<a href="https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/#%E5%AE%9A%E4%BD%8D-webpack-%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0">Webpack 打包优化之体积篇</a></li>
+<li><input checked="" disabled="" type="checkbox"> 导入 <a href="https://github.com/GoogleChromeLabs/size-plugin">size-plugin</a> 插件，使得在构建应用之时，可打印 Webpack 资产的 gzip 大小，以及自上次构建以来的变更。</li>
+<li><input checked="" disabled="" type="checkbox"> 导入为模块提供中间缓存步骤的 <a href="https://github.com/mzgoddard/hard-source-webpack-plugin">hard-source-webpack-plugin</a> 插件，它使第二次构建速度明显加快。</li>
+<li><input checked="" disabled="" type="checkbox"> 将此脚手架，结合 <strong>Node.js</strong>(Koa2) <strong>Nginx</strong> <strong>MondoDb</strong> <strong>Redis</strong>，汇融入于 <strong>Docker</strong>，使 Front-End Developer 可轻松构建整个 Web 应用；目前开源于 <a href="https://github.com/nicejade/docker-vue-node-nginx-mongodb-redis">Docker Vue Node Nginx Mongodb Redis</a>。</li>
+<li><input disabled="" type="checkbox"> 优化内置 <code>Icon</code>(Svg) 组件，使可以接收不同方式输入，并将 Svg 提取至单独文件中，以避免资源重复加载；</li>
+</ul>
+</div></div></div></div></div><div class="el-collapse-item is-active"><div role="tab" aria-expanded="true" aria-controls="el-collapse-content-5475" aria-describedby="el-collapse-content-5475"><div role="button" id="el-collapse-head-5475" tabindex="0" class="el-collapse-item__header is-active"><i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>易于扩展</div></div><div role="tabpanel" aria-labelledby="el-collapse-head-5475" id="el-collapse-content-5475" class="el-collapse-item__wrap"><div class="el-collapse-item__content"><div><strong>Vue-Cli3</strong>：它的插件系统可以让社区根据常见需求构建和共享可复用的解决方案。</div><div class="extra-instruction"><strong>此脚手架</strong>：你可以在此基础上，根据自己所需，轻易增删插件，无痛变更解决方案；推荐文章：<a href="https://jeffjade.com/2018/05/20/140-vue-webpack-boilerplate-template/" target="_blank" rel="noreferrer noopener">开箱即用的 Vue Webpack 脚手架模版</a>；<a href="https://jeffjade.com/2017/03/11/120-how-to-write-vue-better/" target="_blank" rel="noreferrer noopener">如何写一手漂亮的 Vue</a>。
+      </div></div></div></div><div class="el-collapse-item is-active"><div role="tab" aria-expanded="true" aria-controls="el-collapse-content-6951" aria-describedby="el-collapse-content-6951"><div role="button" id="el-collapse-head-6951" tabindex="0" class="el-collapse-item__header is-active"><i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>无需 Eject</div></div><div role="tabpanel" aria-labelledby="el-collapse-head-6951" id="el-collapse-content-6951" class="el-collapse-item__wrap"><div class="el-collapse-item__content"><div><strong>Vue-Cli3</strong>：Vue CLI 完全是可配置的，无需 eject。这样你的项目就可以长期保持更新了。</div><div class="extra-instruction"><strong>此脚手架</strong>：默认对项目基本所需，已在 <mark>vue.config.js</mark> 中做了填写，参照的同时，你可自行修改。
+      </div><div class="warning-tip"><strong>注意事项</strong>：在 <mark>vue.config.js</mark> 中，已对<mark>全局样式</mark>做了预先注入，可以无需引用即可使用；对此，须要付出的代价是，一旦对预先注入的<mark>全局样式</mark>做了修改，需要重新运行项目，方可生效。
+      </div></div></div></div><div class="el-collapse-item is-active"><div role="tab" aria-expanded="true" aria-controls="el-collapse-content-1727" aria-describedby="el-collapse-content-1727"><div role="button" id="el-collapse-head-1727" tabindex="0" class="el-collapse-item__header is-active"><i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>CLI 之上的图形化界面</div></div><div role="tabpanel" aria-labelledby="el-collapse-head-1727" id="el-collapse-content-1727" class="el-collapse-item__wrap"><div class="el-collapse-item__content"><div class="markdown-body"><p><strong>Vue-Cli3</strong>：通过配套的图形化界面创建、开发和管理你的项目；运行如下命令即可，这个真的太棒了。</p>
+<pre><code>vue ui</code></pre><p><code>GUI</code> 对新手来说特别有用，但即使你是一个终极极客也很难不喜欢它。你可以用它来创建一个项目、管理 CLI 插件、管理项目的依赖关系、配置项目、运行npm脚本；</p>
+</div><img src="/img/vue-cli-manage-cli-plugin.bece2ac2.png" alt="Vue-Cli3 脚手架模版" class="image-desc"><img src="/img/vue-cli-manage-project-dependencies.f6d9e3a0.png" alt="Vue-Cli3 脚手架模版" class="image-desc"><img src="/img/vue-cli-npm.96fb4309.png" alt="Vue-Cli3 脚手架模版" class="image-desc"></div></div></div><div class="el-collapse-item is-active"><div role="tab" aria-expanded="true" aria-controls="el-collapse-content-5649" aria-describedby="el-collapse-content-5649"><div role="button" id="el-collapse-head-5649" tabindex="0" class="el-collapse-item__header is-active"><i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>即刻创建原型</div></div><div role="tabpanel" aria-labelledby="el-collapse-head-5649" id="el-collapse-content-5649" class="el-collapse-item__wrap"><div class="el-collapse-item__content"><div class="markdown-body"><p><strong>Vue-Cli3</strong>：用单个 Vue 文件即刻实践新的灵感。Vue CLI3 带有疯狂的新功能。 当您想要使用组件时，您可以创建单个文件组件（.vue 文件），而不是创建新项目，并通过运行 <code>vue serve MyAwesomeComponent.vue</code> 在浏览器中提供它。您甚至可以构建组件并在需要时进行部署。</p>
+</div></div></div></div><div class="el-collapse-item is-active"><div role="tab" aria-expanded="true" aria-controls="el-collapse-content-6007" aria-describedby="el-collapse-content-6007"><div role="button" id="el-collapse-head-6007" tabindex="0" class="el-collapse-item__header is-active"><i class="el-collapse-item__arrow el-icon-arrow-right is-active"></i>面向未来</div></div><div role="tabpanel" aria-labelledby="el-collapse-head-6007" id="el-collapse-content-6007" class="el-collapse-item__wrap"><div class="el-collapse-item__content"><div class="markdown-body"><p><strong>Vue-Cli3</strong>：为现代浏览器轻松产出原生的 ES2015 代码，或将你的 Vue 组件构建为原生的 Web Components 组件。</p>
+<h4 id="vue-cli-service-serve">vue-cli-service serve</h4>
+<p>用法：vue-cli-service serve [options] [entry]
+选项：</p>
+<pre><code class="language-bash">--open    在服务器启动时打开浏览器
+--copy    在服务器启动时将 URL 复制到剪切版
+--mode    指定环境模式 (默认值：development)
+--host    指定 host (默认值：0.0.0.0)
+--port    指定 port (默认值：8080)
+--https   使用 https (默认值：false)</code></pre>
+<h4 id="vue-cli-service-serve">vue-cli-service serve</h4>
+<p>命令会启动一个开发服务器 (基于 <a href="https://github.com/webpack/webpack-dev-server">webpack-dev-server</a>) 并附带开箱即用的模块热重载 (Hot-Module-Replacement)。</p>
+<p>除了通过命令行参数，你也可以使用 vue.config.js 里的 <a href="https://cli.vuejs.org/zh/config/#devserver">devServer</a> 字段配置开发服务器。</p>
+<h4 id="vue-cli-service-build">vue-cli-service build</h4>
+<p>用法：vue-cli-service build [options] [entry|pattern]</p>
+<p>选项：</p>
+<pre><code class="language-bash">--mode        指定环境模式 (默认值：production)
+--dest        指定输出目录 (默认值：dist)
+--modern      面向现代浏览器不带自动回退地构建应用
+--target      app | lib | wc | wc-async (默认值：app)
+--name        库或 Web Components 模式下的名字 (默认值：package.json 中的 "name" 字段或入口文件名)
+--no-clean    在构建项目之前不清除目标目录
+--report      生成 report.html 以帮助分析包内容
+--report-json 生成 report.json 以帮助分析包内容
+--watch       监听文件变化</code></pre>
+<p><code>vue-cli-service build</code> 会在 <em>dist/</em> 目录产生一个可用于生产环境的包，带有 JS/CSS/HTML 的压缩，和为更好的缓存而做的自动的 vendor chunk splitting。它的 chunk manifest 会内联在 HTML 里。</p>
+<p>这里还有一些有用的命令参数：</p>
+<ul>
+<li><p>--modern 使用<a href="https://cli.vuejs.org/zh/guide/browser-compatibility.html#%E7%8E%B0%E4%BB%A3%E6%A8%A1%E5%BC%8F">现代模式</a>构建应用，为现代浏览器交付原生支持的 ES2015 代码，并生成一个兼容老浏览器的包用来自动回退。</p>
+</li>
+<li><p>--target 允许你将项目中的任何组件以一个库或 Web Components 组件的方式进行构建。更多细节请查阅<a href="https://cli.vuejs.org/zh/guide/build-targets.html">构建目标</a>。</p>
+</li>
+<li><p>--report 和 --report-json 会根据构建统计生成报告，它会帮助你分析包中包含的模块们的大小。</p>
+</li>
+</ul>
+</div></div></div></div></div><div class="advertisement-moudle"><div class="el-carousel el-carousel--card"><div class="el-carousel__container" style="height: 100px;"><button type="button" class="el-carousel__arrow el-carousel__arrow--left"><i class="el-icon-arrow-left"></i></button><button type="button" class="el-carousel__arrow el-carousel__arrow--right"><i class="el-icon-arrow-right"></i></button><div class="el-carousel__item is-active el-carousel__item--card is-in-stage" style="transform: translateX(152px) scale(1);"><div class="el-carousel__mask" style="display: none;"></div><a href="//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&amp;as=0004" target="_blank" rel="noreferrer noopener"><img src="//u.djicdn.com/uploads/ad_image_file/file/1670/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_970-250.jpg" alt="“御”Mavic 2 - 全新 Hasselblad 镜头与你一同高瞻远瞩，以小见大" class="advertisement-img"></a></div><div class="el-carousel__item el-carousel__item--card is-in-stage" style="transform: translateX(329.84px) scale(0.83);"><div class="el-carousel__mask"></div><a href="//click.dji.com/AHT8n4-15xfguKCaOzzEPA?pm=link&amp;as=0004" target="_blank" rel="noreferrer noopener"><img src="//u.djicdn.com/uploads/ad_image_file/file/1234/970_250.jpg" alt="特洛Tello-迷你无人机" class="advertisement-img"></a></div><div class="el-carousel__item el-carousel__item--card" style="transform: translateX(-278.16px) scale(0.83);"><div class="el-carousel__mask"></div><a href="//click.dji.com/AHT8n4-15xfguKCaOzzEPA?pm=link&amp;as=0004" target="_blank" rel="noreferrer noopener"><img src="//u.djicdn.com/uploads/ad_image_file/file/1242/970_250.jpg" alt="特洛Tello-益智编程无人机" class="advertisement-img"></a></div><div class="el-carousel__item el-carousel__item--card is-in-stage" style="transform: translateX(-25.84px) scale(0.83);"><div class="el-carousel__mask"></div><a href="//click.dji.com/AHT8n4-15xfguKCaOzzEPA?pm=link&amp;as=0004" target="_blank" rel="noreferrer noopener"><img src="//u.djicdn.com/uploads/ad_image_file/file/992/970___250.jpg" alt="大疆无人机-DJI &quot;御&quot; Mavic Air" class="advertisement-img"></a></div></div><ul class="el-carousel__indicators el-carousel__indicators--outside"><li class="el-carousel__indicator is-active"><button class="el-carousel__button"><!----></button></li><li class="el-carousel__indicator"><button class="el-carousel__button"><!----></button></li><li class="el-carousel__indicator"><button class="el-carousel__button"><!----></button></li><li class="el-carousel__indicator"><button class="el-carousel__button"><!----></button></li></ul></div></div></div></div></div><script src="/js/element.992944a9.js"></script><script src="/js/app.1f41f7fe.js"></script></body></html>
