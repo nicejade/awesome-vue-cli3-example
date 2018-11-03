@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <template>
   <div class="advertisement-moudle">
     <el-carousel :height="carouselHeight" type="card" :interval="5000" arrow="always">
@@ -14,13 +16,14 @@
 export default {
   name: 'Advertisement',
 
-  data () {
+  data() {
     return {
       carouselHeight: '100px',
       items: [
         {
           path: '//click.dji.com/AAMD9H5ODH2wTVtxUWwxxw?pm=link&as=0004',
-          image: '//u.djicdn.com/uploads/ad_image_file/file/1670/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_970-250.jpg',
+          image:
+            '//u.djicdn.com/uploads/ad_image_file/file/1670/%E5%A4%A7%E7%96%86%E6%8E%A8%E5%B9%BF%E8%81%94%E7%9B%9Fbanner_970-250.jpg',
           alt: '“御”Mavic 2 - 全新 Hasselblad 镜头与你一同高瞻远瞩，以小见大'
         },
         {
@@ -42,24 +45,20 @@ export default {
     }
   },
 
-  computed: {
-  },
+  computed: {},
 
-  components: {
-  },
+  components: {},
 
-  mounted () {
-  },
+  mounted() {},
 
-  methods: {
-  }
+  methods: {}
 }
 </script>
 
 <style lang="scss">
 .advertisement-moudle {
   margin-bottom: 6 * $size-factor;
-  .text-center{
+  .text-center {
     text-align: center;
   }
   .advertisement-img {
