@@ -1,6 +1,6 @@
 {
-  "name": "Vue-Cli3 实践",
-  "short_name": "Vue-Cli3 实践",
+  "name": "Vue 脚手架",
+  "short_name": "Vue 脚手架",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "https://vue-cli3.lovejade.cn/?from=device-screen",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#4DBA87"
