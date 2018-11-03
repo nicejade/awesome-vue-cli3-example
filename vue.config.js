@@ -133,9 +133,9 @@ module.exports = {
         // Required - Routes to render.
         routes: ['/', '/explore']
       }) : () => {},
-      isProductionEnvFlag ? new SizePlugin() : () => {},
-      // Need Fix 🚧 : HardSourceWebpackPlugin & PWA will conflict.
-      !isProductionEnvFlag ? new HardSourceWebpackPlugin() : () => {}
+      // NEED FIX 🚧 : HardSourceWebpackPlugin Will Cause Error.
+      // new HardSourceWebpackPlugin(),
+      isProductionEnvFlag ? new SizePlugin() : () => {}
     ]
   },
 
