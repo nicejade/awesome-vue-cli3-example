@@ -61,12 +61,15 @@ export default {
 - [x] 引入 [vue-meta](https://github.com/declandewet/vue-meta) 插件以便允许您管理应用的元信息，支持 \`SSR\` + \`Streaming\`，就像 [react-helmet](https://github.com/nfl/react-helmet) 对 React 一样，它对 \`SEO\` 很棒。
 - [x] 开启 & 运用 [Jest](https://jestjs.io/) 对组件做单元测试，并附以 Demo 示例；
 - [x] 集成 [Prettier](https://prettier.io/) 插件并做配置，促使团队写出更好且风格一致的代码，具体参见[使用 ESLint ＆ Prettier美化Vue代码](https://jeffjade.com/2018/06/18/142-beautify-vue-by-eslint-and-prettier/)；
+- [x] 导入 [cli-plugin-pwa](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa) 插件，并在 \`vue.config.js\` 中进行配置，使得你可以轻松在 Vue 项目中开始使用 [PWA](https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/pwa-tutorial.md)；
 - [x] 导入 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)  插件，使得在单页面应用程序中预呈现静态 HTML，优化 SEO 以及首屏渲染。
-- [x] 导入 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) 插件，使得运行 \`yarn analyz\`，即可直观得到构建包内容，以助优化；详情参见：[Webpack 打包优化之体积篇](https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/#%E5%AE%9A%E4%BD%8D-webpack-%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0)
+- [x] 导入 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) 插件，使得运行 \`yarn analyz\`，即可直观得到构建包内容，以助优化；详情参见：[Webpack 打包优化之体积篇](https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/#%E5%AE%9A%E4%BD%8D-webpack-%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0)。
 - [x] 导入 [size-plugin](https://github.com/GoogleChromeLabs/size-plugin) 插件，使得在构建应用之时，可打印 Webpack 资产的 gzip 大小，以及自上次构建以来的变更。
 - [x] 导入为模块提供中间缓存步骤的 [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin) 插件，它使第二次构建速度明显加快。
 - [x] 将此脚手架，结合 **Node.js**(Koa2) **Nginx** **MondoDb** **Redis**，汇融入于 **Docker**，使 Front-End Developer 可轻松构建整个 Web 应用；目前开源于 [Docker Vue Node Nginx Mongodb Redis](https://github.com/nicejade/docker-vue-node-nginx-mongodb-redis)。
 - [ ] 优化内置 \`Icon\`(Svg) 组件，使可以接收不同方式输入，并将 Svg 提取至单独文件中，以避免资源重复加载；
+
+>**温馨提示**: [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin): 在单页面应用程序中预呈现静态 HTML。如果你不需要它，完全可以移除掉它；因为它有大量的依赖([puppeteer](https://github.com/GoogleChrome/puppeteer)，Chromium: ~170MB Mac, ~282MB Linux, ~280MB Win)需要下载，这比较耗时。
       `,
       cliGraphicalInterfaceMd: `
 **Vue-Cli3**：通过配套的图形化界面创建、开发和管理你的项目；运行如下命令即可，这个真的太棒了。
