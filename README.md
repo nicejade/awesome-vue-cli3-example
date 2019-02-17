@@ -24,10 +24,15 @@
   <a href="https://github.com/nicejade/vue-boilerplate-template">
     <img src="https://img.shields.io/github/license/nicejade/vue-boilerplate-template.svg" alt="LICENSE">
   </a>
-  <a href="https://about.me/nicejade"><img src="https://img.shields.io/badge/Author-nicejade-%23a696c8.svg" alt="Author nicejade"></a>
+  <a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/??utm_source=awesome-vue-cli3-example">
+   <img src="https://img.shields.io/badge/chat-on%20blog-brightgreen.svg" alt="Chat On My Blog">
+  </a>
+  <a href="https://aboutme.lovejade.cn/">
+    <img src="https://img.shields.io/badge/Author-nicejade-%23a696c8.svg" alt="Author nicejade">
+  </a>
 </div>
 
-#### English | [中文](https://vue-cli3.lovejade.cn/)
+#### English | [中文](https://vue-cli3.lovejade.cn/??utm_source=awesome-vue-cli3-example)
 
 ## Goal and Philosophy
 
