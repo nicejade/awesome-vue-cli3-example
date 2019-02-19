@@ -2,10 +2,15 @@
 
 <template>
   <div class="advertisement-moudle">
-    <el-carousel :height="carouselHeight" type="card" :interval="5000" arrow="always">
+    <el-carousel
+      :height="carouselHeight"
+      type="card"
+      :interval="5000"
+      arrow="always"
+    >
       <el-carousel-item v-for="item in items" :key="item.alt">
         <a :href="item.path" target="_blank" rel="noreferrer noopener">
-          <img class="advertisement-img" :src="item.image" :alt="item.alt">
+          <img class="advertisement-img" :src="item.image" :alt="item.alt" />
         </a>
       </el-carousel-item>
     </el-carousel>

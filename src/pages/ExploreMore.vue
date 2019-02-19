@@ -5,20 +5,29 @@
     <div class="module-content">
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="back-tip">返回<a href="/">Vue-Cli3 脚手架模版</a>首页</div>
+          <div class="back-tip">
+            返回<a href="/">Vue-Cli3 脚手架模版</a>首页
+          </div>
           <el-table :data="tableData" border stripe highlight-current-row>
             <el-table-column prop="name" label="作品名称" width="120">
             </el-table-column>
             <el-table-column prop="address" label="在线地址" width="210">
               <template slot-scope="scope">
-                <a :href="scope.row.address"
-                  target="_blank" rel="noreferrer noopener">
+                <a
+                  :href="scope.row.address"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   {{ scope.row.address }}
                 </a>
               </template>
             </el-table-column>
-            <el-table-column prop="description" label="作品描述"
-              show-overflow-tooltip min-width="160">
+            <el-table-column
+              prop="description"
+              label="作品描述"
+              show-overflow-tooltip
+              min-width="160"
+            >
               <template slot-scope="scope">
                 <span v-html="scope.row.description"></span>
               </template>
@@ -29,11 +38,18 @@
               <template slot-scope="scope">
                 <div class="operation-area">
                   <el-button
-                    type="primary" size="medium"
-                    @click="onEditClick(scope.row, scope.$index)"> 编辑
+                    type="primary"
+                    size="medium"
+                    @click="onEditClick(scope.row, scope.$index)"
+                  >
+                    编辑
                   </el-button>
-                  <a :href="scope.row.address" class="heart-link"
-                    target="_blank" rel="noreferrer noopener">
+                  <a
+                    :href="scope.row.address"
+                    class="heart-link"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     <span class="heart"></span>
                   </a>
                 </div>
@@ -46,8 +62,10 @@
               @current-change="handleCurrentChange"
               :current-page="currentPage"
               :page-sizes="[20, 50]"
-              :page-size="100" layout="total, sizes, prev, pager, next"
-              :total="1">
+              :page-size="100"
+              layout="total, sizes, prev, pager, next"
+              :total="1"
+            >
             </el-pagination>
           </div>
         </div>
@@ -55,7 +73,8 @@
       <edit-dialog
         :pdata="currentRowData"
         v-model="isDialogVisible"
-        @dispatch-data="onUpdateRowData">
+        @dispatch-data="onUpdateRowData"
+      >
       </edit-dialog>
     </div>
   </section>

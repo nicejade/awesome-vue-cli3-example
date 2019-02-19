@@ -8,16 +8,21 @@
     </el-tabs>
 
     <div class="write-area" v-if="activeName === 'write'">
-      <el-input type="textarea" :placeholder="placeholder"
-        :maxlength="3600" :autosize="{ minRows: 6, maxRows: 21}"
+      <el-input
+        type="textarea"
+        :placeholder="placeholder"
+        :maxlength="3600"
+        :autosize="{ minRows: 6, maxRows: 21 }"
         v-model="originalVal"
-        @change="onChangeEvent">
+        @change="onChangeEvent"
+      >
       </el-input>
     </div>
     <MarkdownPreview
       class="preview-area"
       :value="originalVal"
-      v-if="activeName === 'preview'">
+      v-if="activeName === 'preview'"
+    >
     </MarkdownPreview>
   </div>
 </template>
