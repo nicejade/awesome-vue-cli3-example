@@ -1,4 +1,4 @@
-<p align="center"><a href="https://vuejs.org" target="_blank"><img width="100"src="https://vuejs.org/images/logo.png"></a></p>
+<p align="center"><a href="https://nicelinks.site/post/5b1a221c0526c920d6dfaada" target="_blank"><img width="100"src="https://vuejs.org/images/logo.png"></a></p>
 
 <h1 align="center"><strong>Awesome Vue-Cli3 Example </strong></h1>
 
@@ -23,6 +23,9 @@
   </a>
   <a href="https://github.com/nicejade/vue-boilerplate-template">
     <img src="https://img.shields.io/github/license/nicejade/vue-boilerplate-template.svg" alt="LICENSE">
+  </a>
+  <a href="https://nicelinks.site/post/5c16083e819ae45de1453caa">
+    <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" alt="Prettier">
   </a>
   <a href="https://www.jeffjade.com/2019/01/13/146-awesome-vue-cli3-example/??utm_source=awesome-vue-cli3-example">
    <img src="https://img.shields.io/badge/chat-on%20blog-brightgreen.svg" alt="Chat On My Blog">
@@ -83,20 +86,21 @@ This boilerplate built on [Vue-Cli3](https://github.com/vuejs/vue-cli/) inheriti
 
 ## Recommended links
 
-- [**NICE LINKS**](https://nicelinks.site?from=github)
-- [About Me](https://about.me/nicejade/)
-- [Latest Blog](https://nice.lovejade.cn/)
-- [First Blog](https://jeffjade.com)
-- [Second Blog](https://blog.lovejade.cn/)
-- [Weibo](http://weibo.com/jeffjade)
+- [**NICE LINKS**](https://nicelinks.site/?utm_source=awesome-vue-cli3-example)
+- [About Me](https://about.me/nicejade/?utm_source=awesome-vue-cli3-example)
+- [Latest Blog](https://quickapp.lovejade.cn/?utm_source=awesome-vue-cli3-example)
+- [First Blog](https://jeffjade.com/?utm_source=awesome-vue-cli3-example)
+- [Second Blog](https://nice.lovejade.cn/?utm_source=awesome-vue-cli3-example)
+- [Auxiliary blog](https://blog.lovejade.cn/?utm_source=awesome-vue-cli3-example)
+- [Weibo](http://weibo.com/jeffjade/)
 - [ZhiHu](https://www.zhihu.com/people/yang-qiong-pu/)
 - [SegmentFault](https://segmentfault.com/u/jeffjade)
 - [JianShu](http://www.jianshu.com/u/9aae3d8f4c3d)
 - [Twitter](https://twitter.com/nicejadeyang)
-- [Facebook](https://www.facebook.com/yang.gang.jade)
+- [Facebook](https://www.facebook.com/nice.jade.yang)
 
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2018-present, [nicejade](https://about.me/nicejade/).
+Copyright (c) 2018-present, [nicejade](https://aboutme.lovejade.cn/?utm_source=awesome-vue-cli3-example).
