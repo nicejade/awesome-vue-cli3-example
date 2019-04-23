@@ -18,11 +18,7 @@
       >
       </el-input>
     </div>
-    <MarkdownPreview
-      class="preview-area"
-      :value="originalVal"
-      v-if="activeName === 'preview'"
-    >
+    <MarkdownPreview class="preview-area" :value="originalVal" v-if="activeName === 'preview'">
     </MarkdownPreview>
   </div>
 </template>

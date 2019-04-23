@@ -7,10 +7,10 @@
  2. The use of `table` rather than `block` is only necessary if using
     `:before` to contain the top-margins of child elements.
  Source: http://nicolasgallagher.com/micro-clearfix-hack */
- @mixin clearfix() {
+@mixin clearfix() {
   &:before,
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
   }
   &:after {
@@ -60,7 +60,7 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin flex-box-center($direction: row, $justify: center, $align-items: center){
+@mixin flex-box-center($direction: row, $justify: center, $align-items: center) {
   flex-direction: $direction;
   display: -webkit-box;
   display: -moz-box;
@@ -77,4 +77,3 @@
   -webkit-justify-content: center;
   justify-content: $justify;
 }
-

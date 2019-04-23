@@ -5,19 +5,12 @@
     <div class="module-content">
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="back-tip">
-            返回<a href="/">Vue-Cli3 脚手架模版</a>首页
-          </div>
+          <div class="back-tip">返回<a href="/">Vue-Cli3 脚手架模版</a>首页</div>
           <el-table :data="tableData" border stripe highlight-current-row>
-            <el-table-column prop="name" label="作品名称" width="120">
-            </el-table-column>
+            <el-table-column prop="name" label="作品名称" width="120"> </el-table-column>
             <el-table-column prop="address" label="在线地址" width="210">
               <template slot-scope="scope">
-                <a
-                  :href="scope.row.address"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
+                <a :href="scope.row.address" target="_blank" rel="noreferrer noopener">
                   {{ scope.row.address }}
                 </a>
               </template>
@@ -32,8 +25,7 @@
                 <span v-html="scope.row.description"></span>
               </template>
             </el-table-column>
-            <el-table-column prop="date" label="上线日期" width="100">
-            </el-table-column>
+            <el-table-column prop="date" label="上线日期" width="100"> </el-table-column>
             <el-table-column label="操作" width="180">
               <template slot-scope="scope">
                 <div class="operation-area">
@@ -94,8 +86,7 @@ export default {
   data() {
     return {
       title: '发现更多',
-      description:
-        '个人作品集，倾城之链，晚晴幽草轩，静晴轩别苑，天意人间舫，Vue-Cli3 实践参考',
+      description: '个人作品集，倾城之链，晚晴幽草轩，静晴轩别苑，天意人间舫，Vue-Cli3 实践参考',
       tableData: [
         {
           name: '倾城之链',
@@ -128,8 +119,7 @@ export default {
         {
           name: '天意人间舫',
           address: 'https://blog.lovejade.cn/',
-          description:
-            '辅助主博客——<a href="https://jeffjade.com">晚晴幽草轩</a>の华丽存在',
+          description: '辅助主博客——<a href="https://jeffjade.com">晚晴幽草轩</a>の华丽存在',
           date: '2016-01-20'
         },
         {

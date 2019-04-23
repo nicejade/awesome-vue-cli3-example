@@ -17,15 +17,11 @@ export default {
   created() {},
 
   metaInfo() {
-    const titleContent = this.title
-      ? `${this.title} - ${this.siteTitle}`
-      : `${this.siteTitle}`
+    const titleContent = this.title ? `${this.title} - ${this.siteTitle}` : `${this.siteTitle}`
     return {
       title: this.title,
       titleTemplate: titleChunk => {
-        return titleChunk
-          ? `${titleChunk} - ${this.siteTitle}`
-          : `${this.siteTitle}`
+        return titleChunk ? `${titleChunk} - ${this.siteTitle}` : `${this.siteTitle}`
       },
       meta: [
         { vmid: 'title', name: 'title', content: titleContent },

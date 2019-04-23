@@ -6,9 +6,8 @@
     <el-collapse v-model="activeNames" @change="onHandleChange">
       <el-collapse-item title="功能丰富" name="0">
         <div>
-          <strong>Vue-Cli3</strong>：对
-          Babel、TypeScript、ESLint、PostCSS、PWA、单元测试和 End-to-end
-          测试提供开箱即用的支持。
+          <strong>Vue-Cli3</strong>：对 Babel、TypeScript、ESLint、PostCSS、PWA、单元测试和
+          End-to-end 测试提供开箱即用的支持。
         </div>
         <div class="extra-instruction">
           <MarkdownPreview
@@ -19,8 +18,7 @@
       </el-collapse-item>
       <el-collapse-item title="易于扩展" name="1">
         <div>
-          <strong>Vue-Cli3</strong
-          >：它的插件系统可以让社区根据常见需求构建和共享可复用的解决方案。
+          <strong>Vue-Cli3</strong>：它的插件系统可以让社区根据常见需求构建和共享可复用的解决方案。
         </div>
         <div class="extra-instruction">
           <strong>此脚手架</strong
@@ -64,11 +62,7 @@
           src="@assets/images/vue-cli-manage-project-dependencies.png"
           alt="Vue-Cli3 脚手架模版"
         />
-        <img
-          class="image-desc"
-          src="@assets/images/vue-cli-npm.png"
-          alt="Vue-Cli3 脚手架模版"
-        />
+        <img class="image-desc" src="@assets/images/vue-cli-npm.png" alt="Vue-Cli3 脚手架模版" />
       </el-collapse-item>
       <el-collapse-item title="即刻创建原型" name="4">
         <MarkdownPreview :value="instantPrototypingMd" />

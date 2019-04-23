@@ -1,12 +1,7 @@
 <!-- @format -->
 
 <template>
-  <el-dialog
-    title="编辑列表"
-    :visible.sync="isVisible"
-    @close="onClose"
-    class="edit-dialog"
-  >
+  <el-dialog title="编辑列表" :visible.sync="isVisible" @close="onClose" class="edit-dialog">
     <el-form :model="fillForm" :rules="rules" ref="fillForm">
       <div class="form-group col-sm-12">
         <el-form-item label="作品名称" prop="name">
