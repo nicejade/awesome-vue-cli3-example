@@ -6,6 +6,8 @@
     "start": "yarn serve",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
+    "watcher": "onchange '**/*.md' \"src/**/**/*.{js,css,scss,vue}\" -- prettier --write {{changed}}",
+    "prettier": "prettier --write \"src/**/**/*.{js,css,scss,vue}\"",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "deploy": "bash ./commands/deploy.sh",
@@ -44,7 +46,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "node-sass": "^4.9.0",
-    "prerender-spa-plugin": "^3.4.0",
+    "onchange": "^5.2.0",
     "prettier-eslint-cli": "^4.7.1",
     "sass-loader": "^7.0.1",
     "size-plugin": "^1.0.0",
@@ -102,7 +104,9 @@
   },
   "prettier": {
     "singleQuote": true,
-    "semi": false
+    "semi": false,
+    "printWidth": 100,
+    "proseWrap": "never"
   },
   "postcss": {
     "plugins": {
@@ -124,8 +128,7 @@
   },
   "lint-staged": {
     "**/**.{js,json,pcss,md,vue,css,scss}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }
