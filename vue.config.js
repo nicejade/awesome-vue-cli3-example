@@ -4,7 +4,6 @@ const path = require('path')
 const fs = require('fs')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const SizePlugin = require('size-plugin')
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 
 const isProductionEnvFlag = process.env.NODE_ENV === 'production'
 
@@ -127,14 +126,12 @@ module.exports = {
 
   configureWebpack: {
     plugins: [
-      isProductionEnvFlag ? new PrerenderSPAPlugin({
+      isProductionEnvFlag && new PrerenderSPAPlugin({
         // Required - The path to the webpack-outputted app to prerender.
         staticDir: path.join(__dirname, 'dist'),
         // Required - Routes to render.
         routes: ['/', '/explore']
-      }) : () => {},
-      // NEED FIX 🚧 : HardSourceWebpackPlugin Will Cause Error.
-      // new HardSourceWebpackPlugin(),
+      }),
       isProductionEnvFlag ? new SizePlugin() : () => {}
     ]
   },
