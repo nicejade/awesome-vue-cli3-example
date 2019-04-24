@@ -6,6 +6,9 @@ const SizePlugin = require('size-plugin')
 
 const isProductionEnvFlag = process.env.NODE_ENV === 'production'
 
+/* 是否开启 SPA 预渲染，如果要开启，则须另外安装 prerender-spa-plugin 插件 */
+const isOpenPrerenderSPA = false
+
 function resolveRealPath(dir) {
   return path.join(__dirname, dir)
 }
@@ -125,7 +128,7 @@ module.exports = {
 
   configureWebpack: {
     plugins: [
-      isProductionEnvFlag ? new require('prerender-spa-plugin')({
+      (isProductionEnvFlag && isOpenPrerenderSPA) ? new require('prerender-spa-plugin')({
         // Required - The path to the webpack-outputted app to prerender.
         staticDir: path.join(__dirname, 'dist'),
         // Required - Routes to render.
