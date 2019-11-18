@@ -34,8 +34,7 @@ describe('Arrow.vue', () => {
     const wrapper = shallowMount(Arrow, {
       propsData: { color: propColor }
     })
-    const compBorderColor = wrapper.find('.arrow-component').element.style
-      .borderColor
+    const compBorderColor = wrapper.find('.arrow-component').element.style.borderColor
     expect(compBorderColor).toBe(propColor)
   })
 
@@ -46,8 +45,7 @@ describe('Arrow.vue', () => {
     const wrapper = shallowMount(Arrow, {
       propsData: { color: propColor }
     })
-    const compBorderColor = wrapper.find('.arrow-component').element.style
-      .borderColor
+    const compBorderColor = wrapper.find('.arrow-component').element.style.borderColor
     expect(compBorderColor).toBe(defaultColor)
   })
 })

@@ -7,7 +7,7 @@ const opn = require('opn')
 
 const app = express()
 
-const resolveRealPath = (dir) => {
+const resolveRealPath = dir => {
   return path.join(__dirname, dir)
 }
 
@@ -19,12 +19,12 @@ const openStaticServer = () => {
   app.use('/img', express.static(resolveRealPath('../dist/img/')))
   app.use('/fonts', express.static(resolveRealPath('../dist/fonts/')))
 
-  app.get('*', function (req, res) {
+  app.get('*', function(req, res) {
     const content = fs.readFileSync(entryFilePath, 'utf8')
     res.send(content)
   })
 
-  app.listen(3000, function () {
+  app.listen(3000, function() {
     console.log(chalk.cyan('Example app listening on port 3000!\n'))
     console.log(chalk.yellow('You Can Visit: ') + chalk.green('http://localhost:3000/'))
     opn('http://localhost:3000')
