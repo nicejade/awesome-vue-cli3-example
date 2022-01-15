@@ -24,7 +24,7 @@
     "element-ui": "2.4.6",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.15",
-    "marked": "0.7.0",
+    "marked": "4.0.10",
     "node-sass": "4.9.0",
     "q": "^1.5.1",
     "register-service-worker": "^1.0.0",
